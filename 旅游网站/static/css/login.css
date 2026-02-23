@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../img/20200505161623_rxgst.jpg); /* 替换为你的背景图片路径 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    padding: 40px; /* 增加内边距，使模块范围变大 */
+    border-radius: 10px; /* 增大圆角半径 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* 增大宽度 */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* 使内部元素水平居中，主要针对按钮等元素 */
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px; /* 增加每组表单元素（标签 + 输入框）的整体间距 */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; /* 增加标签下方间距 */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px; /* 增大输入框内边距 */
+    border: 2px solid #ccc; /* 增大边框粗细 */
+    border-radius: 5px; /* 增大输入框圆角半径 */
+}
+
+input[type="submit"] {
+    margin: 0 auto; /* 水平居中 */
+    display: block;
+    padding: 15px 30px; /* 增加按钮内边距，水平和垂直方向适当调整 */
+    background-color: #007BFF; /* 修改背景颜色 */
+    color: white; /* 修改文字颜色为白色 */
+    border: none;
+    border-radius: 5px; /* 保持一定圆角效果 */
+    cursor: pointer;
+    margin-top: 20px; /* 让按钮向下移动一点 */
+}
+
+p {
+    text-align: center;
+    margin-top: 50px; /* 增加注册提示上方间距 */
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

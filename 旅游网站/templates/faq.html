@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见问题</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .faq-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            padding: 10px;
+            background-color: #eaeaea;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .faq-answer {
+            padding: 10px;
+            display: none;
+            background-color: #fff;
+        }
+
+        .faq-question.active + .faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>常见问题</h1>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>如何预订旅行服务？</h3>
+                <i class="arrow-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>您可以在我们网站的“预订服务”页面，填写您的出行信息、选择目的地和出行日期等，然后按照提示完成预订流程。如有任何疑问，也可以联系我们的客服人员为您协助。</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>取消预订有什么规定？</h3>
+                <i class="arrow-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>如果您需要取消预订，请在出行前[X]天联系我们的客服。根据您预订的套餐和具体情况，可能会收取一定的手续费。具体细则您可以查看预订时的相关条款，或咨询客服了解详情。</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>旅行中包含哪些服务？</h3>
+                <i class="arrow-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>我们的旅行服务通常包含交通接送（具体根据行程安排）、酒店住宿、专业导游陪同讲解。部分套餐还可能包含景点门票、特色餐饮等。您可以在每个旅行套餐的详情页面查看具体包含的服务内容。</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleAnswer(question) {
+            question.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

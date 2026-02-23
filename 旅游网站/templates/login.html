@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/login.css" />
+  <title>Login Page</title>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required><br>
+
+      <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="{{ url_for('register') }}">enroll</a></p>
+  </div>
+
+  <script>
+    const loginForm = document.querySelector('form');
+    const loginButton = document.querySelector('form input[type="submit"]');
+    loginButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const registeredUsername = localStorage.getItem('registeredUsername');
+      const registeredPassword = localStorage.getItem('registeredPassword');
+      if (username === registeredUsername && password === registeredPassword) {
+        window.location.href = 'http://127.0.0.1:8848/%E4%B8%BB%E9%A1%B5/index.html'; // 跳转到主页
+      } else {
+        alert('账号或密码输入错误，请重新输入');
+      }
+    });
+  </script>
+</body>
+
+</html>

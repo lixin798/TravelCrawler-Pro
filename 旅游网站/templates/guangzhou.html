@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/lyzx.css" type="text/css" />
+    <title>广州</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+       .home-link-container {
+            margin-bottom: 20px;
+        }
+
+       .home-link-container a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+       .contact {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+       .title h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+       .content h1 {
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+       .from {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+       .img img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+       .content p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+       .destination h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 30px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="home-link-container">
+            <a href="{{ url_for('index') }}">Return to the home page</a>
+        </div>
+        <!-- 旅游介绍 -->
+        <div class="contact">
+            <div class="title">
+                <h1>精彩旅游，即刻出发</h1>
+            </div>
+            <div class="content">
+                <h1>美丽广州</h1>
+                <p class="from">来源:旅游人文记</p>
+                <p class="img">
+                    <img src="static/img/guangzhou/广州.jfif" alt="" />
+                </p>
+                <p>
+                    广州市，简称“穗”，别称羊城、花城、五羊城，广东省辖地级市，是广东省省会、副省级市、国家中心城市、超大城市，地处中国华南地区，广东省中南部，珠江三角洲的北缘，接近珠江流域下游入海口，总面积7434.40平方千米 。截至2023年10月，广州市下辖11个区 。截至2023年末，广州市常住人口1882.70万人 。
+                </p>
+                <p>
+                    广州市是广州都市圈核心城市，国务院批复确定的中国重要的中心城市，国家历史文化名城，彰显海洋特色的现代化城市，国际性综合交通枢纽城市，科技教育文化中心，国际商贸中心、全国先进制造业基地、综合性门户、国际科技创新中心重要承载地。广州市自古就是中外文化交融之地，广府文化发祥地之一 ，还是中国南部战区司令部驻地，首批沿海开放城市，粤港澳大湾区、泛珠江三角洲经济区的中心城市以及一带一路的枢纽城市，有中国“南大门”之称 。
+                </p>
+                <hr>
+                <h2>广州长隆度假区 - 广州-5A</h2>
+                <div class="destination">
+                    <p>
+                        广州长隆度假区是首批国家5A级旅游景区，这里拥有四大顶尖主题乐园及四大主题酒店，无论是刺激的游乐设施还是精彩的表演，都极具趣味性。非常适合家庭度加出游，同时也是全球2024年旅游榜单前100名之一。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/guangzhou/长隆.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/长隆2.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/长隆3.jfif" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>白云山 - 广州-5A</h2>
+                <div class="destination">
+                    <p>
+                        白云山是广州的著名风景名胜区之一，这里峰峦重叠、溪涧纵横。你可以沿着山路漫步，感受大自然的清幽与宁静；也可以登上山顶俯瞰全市美景，感受广州的繁华与美丽。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/guangzhou/白云山.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/白云山2.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/白云山3.jfif" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>广州塔 - 广州-4A(预估票价:145元)</h2>
+                <div class="destination">
+                    <p>
+                        广州塔是中国第一高塔,站在塔顶,你可以360°无遮挡地俯瞰广州的璀璨夜色,感受这座繁华都市的无限魅力。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/guangzhou/广州塔.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/广州塔2.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/广州塔3.jfif" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>珠江夜游 - 广州(预估票价:98元)</h2>
+                <div class="destination">
+                    <p>
+                        珠江的夜景非常迷人，到了夜晚，乘坐游船，你可以在珠江上远远观赏色彩绚丽的广州地标建筑广州塔及城市的璀璨夜景，感受这座城市的浪漫与活力。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/guangzhou/珠江.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/珠江2.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/珠江3.jfif" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>沙面 - 广州</h2>
+                <div class="destination">
+                    <p>
+                        沙面是广州历史文化的缩影，这里拥有众多精美的欧式建筑，漫步其中，仿佛置身于欧洲小镇，让人陶醉在历史的韵味之中。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/guangzhou/沙面.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/沙面2.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/沙面3.jfif" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>广东科学中心 - 广州-4A（预估票价：60元）</h2>
+                <div class="destination">
+                    <p>
+                        广东科学中心是一个独特建筑与自然融合的科普乐园，适合亲子科学探索之旅。在这里，你可以领略到科技的魅力，增长知识，开拓视野。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/guangzhou/科学馆.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/科学馆2.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/科学馆3.jfif" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>广州动物园 - 广州-4A</h2>
+                <div class="destination">
+                    <p>
+                        广州动物园是家庭游的不二选择，这里集科普、娱乐与亲子互动于一体。你可以近距离观赏到各种珍稀动物，非常具有趣味性。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/guangzhou/动物园.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/动物园2.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/动物园3.jfif" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>广东省博物馆 - 广州</h2>
+                <div class="destination">
+                    <p>
+                        广东省博物馆是探索广东独特历史与艺术的绝佳场所。这里收藏着丰富的文物和艺术品，如须鲸骨骼、潮州木雕等，让你领略到广东深厚的文化底蕴。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/guangzhou/博物馆.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/博物馆2.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/guangzhou/博物馆3.jpg" alt="" />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>© 2024 旅游项目网页。所有 rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+		

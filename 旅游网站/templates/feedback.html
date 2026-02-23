@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客户反馈</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>客户反馈</h1>
+        <p>我们非常重视您的意见和建议，希望您能花几分钟时间填写以下反馈表单，帮助我们不断改进服务。</p>
+        <form action="#" method="post">
+            <label for="name">您的姓名</label>
+            <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+            <label for="email">您的邮箱</label>
+            <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+            <label for="feedback">您的反馈内容</label>
+            <textarea id="feedback" name="feedback" rows="5" placeholder="请输入您的反馈内容（如旅行体验、建议等）" required></textarea>
+            <button type="submit">提交反馈</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/lyzx.css" type="text/css" />
+    <title>重庆</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+       .home-link-container {
+            margin-bottom: 20px;
+        }
+
+       .home-link-container a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+       .contact {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+       .title h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+       .content h1 {
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+       .from {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+       .img img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+       .content p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+       .destination h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 30px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="home-link-container">
+            <a href="{{ url_for('index') }}">Return to the home page</a>
+        </div>
+        <!-- 旅游介绍 -->
+        <div class="contact">
+            <div class="title">
+                <h1>精彩旅游，即刻出发</h1>
+            </div>
+            <div class="content">
+                <h1>美丽重庆</h1>
+                <p class="from">来源:旅游人文记</p>
+                <p class="img">
+                    <img src="static/img/chongqin/重庆.jpg" alt="" />
+                </p>
+                <p>
+                    重庆市，简称“渝”，别称山城、江城，是中华人民共和国直辖市、国家中心城市、超大城市，国务院批复确定的中国重要的中心城市，国家历史文化名城和国际性综合交通枢纽城市，是全国先进制造业基地、西部科技创新中心和对外开放门户、长江上游航运中心。西部金融中心，国际消费中心城市， 辖38个区县， 总面积8.24万平方千米， 截至2023年末，常住人口3191.43万。
+                </p>
+                <p>
+                    重庆市是中国山地城市典范、世界温泉之都、中国火锅之都。为成渝金融法院驻地，中欧班列首发城市，是全国唯一兼具水、陆、空、生产服务、商贸服务“五型”国家物流枢纽的城市，在西部大开发中发挥支撑作用，在“一带一路”中发挥带动作用，在长江经济带中发挥示范作用；拥有世界文化遗产大足石刻、世界自然遗产武隆喀斯特和南川金佛山等景观。
+                </p>
+                <hr>
+                <h2>洪崖洞：现实版《千与千寻》，漫游童话世界</h2>
+                <div class="destination">
+                    <p>
+                        位于沧白路下段的洪崖洞，距今已有2000多年历史。这里一面靠山，一面临江，于是便在75米高的崖壁上修建起了最具重庆特色的吊脚楼，将巴渝民俗文化、山地民居的建筑文化和码头文化融入其中。到了晚上，整个吊脚楼被华灯环绕，像极了动画片《千与千寻》中的汤屋。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/chongqin/洪崖1.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/洪崖2.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/洪崖4.jpeg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>磁器口：重庆最繁华的古镇，藏着难忘的老时光</h2>
+                <div class="destination">
+                    <p>
+                        位于嘉陵江畔的磁器口古镇始建于宋代，拥有“一江两溪三山四街”的独特地貌，形成天然良港，是嘉陵江边重要的水陆码头。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/chongqin/磁口1.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/磁口2.jfif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/磁口3.jfif" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>解放碑：历史最悠久的商圈，给你一天时间爱上它</h2>
+                <div class="destination">
+                    <p>
+                        来了重庆不去解放碑逛一逛，就像是没吃过火锅一样。它是重庆主城最早的商圈，是抗战胜利和重庆解放的历史见证，也是重庆的地标之一。耸入云霄的高楼、奢华大气的商场和街上摩登的美女，无时无刻不在彰显这座繁华都市最华丽的气质。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/chongqin/解放1.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/解放3.gif" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/解放2.jpeg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>长江索道：从空中俯瞰重庆</h2>
+                <div class="destination">
+                    <p>
+                        1980年12月，重庆正式筹备了国内第一条索道——嘉陵江索道。5年后，国内的第二条索道——重庆长江索道也应运而生。很多电影都纷纷在这里取景拍摄，例如《疯狂的石头》、《门》、《周渔的火车》、《日照重庆》等。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/chongqin/长江1.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/长江2.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/长江3.jpeg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>交通茶馆：几十年的老茶馆，感受浓浓市井生活</h2>
+                <div class="destination">
+                    <p>
+                        大名鼎鼎的交通茶馆开在有“涂鸦一条街”之称的黄角坪，是重庆唯一一家保存上世纪八十年代风格的老茶馆。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/chongqin/茶馆1.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/茶馆2.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/茶馆3.jpeg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>鹅岭二厂：印刷厂变身文创园，开启你的文艺范儿</h2>
+                <div class="destination">
+                    <p>
+                        最早这里是民国时期的中央银行印钞机厂，后来演变为重庆印制贰厂，负责50 - 70年代重庆彩色印刷。经过一系列改造，TESTBED2贰厂文创公园成为了文艺青年聚集地，也是电影《从你的全世界路过》外景地。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/chongqin/鹅岭1.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/鹅岭2.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/鹅岭3.jpg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>湖广会馆：闹中取静的诗意世界，探索重庆百年记忆</h2>
+                <div class="destination">
+                    <p>
+                        始建于康熙年间的湖广会馆，距今已有300余年历史，是渝中半岛闹市中的诗意世界。整个古建筑群雕栏画栋，雕刻精美，是中国明清时期南方建筑艺术的代表。而且会馆建筑大多沿袭明清时期四合院布局，具有很高的建筑艺术价值。明亮的黄色外墙，层层叠叠，远观给人一种江南园林之感。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/chongqin/湖广1.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/湖广2.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/12f8380822713699c020499aff9f24d.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/340e9f5d62148e7055c250c059167d0.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/chongqin/2a19c373db352ec9678968631da6857.jpg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>© 2024 旅游项目网页。所有 rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

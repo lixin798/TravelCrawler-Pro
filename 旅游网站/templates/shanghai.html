@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/lyzx.css" type="text/css" />
+    <title>上海</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+       .home-link-container {
+            margin-bottom: 20px;
+        }
+
+       .home-link-container a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+       .contact {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+       .title h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+       .content h1 {
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+       .from {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+       .img img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+       .content p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+       .destination h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 30px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="home-link-container">
+            <a href="{{ url_for('index') }}">Return to the home page</a>
+        </div>
+        <!-- 旅游介绍 -->
+        <div class="contact">
+            <div class="title">
+                <h1>精彩旅游，即刻出发</h1>
+            </div>
+            <div class="content">
+                <h1>美丽上海</h1>
+                <p class="from">来源:旅游人文记</p>
+                <p class="img">
+                    <img src="static/img/shanghai/上海.jfif" alt="" />
+                </p>
+                <p>
+                    上海市（Shanghai），简称“沪”，别名“申”，是中华人民共和国直辖市， 位于中国东部，地处长江入海口， 境域北界长江，东濒东海，南临杭州湾，西接江苏省和浙江省，总面积6340.5平方千米，下辖16个区。截至2022年末，全市常住人口2475.89万人，上海话属吴语方言太湖片。 市政府驻地上海市黄浦区人民大道200号。
+                </p>
+                <p>
+                    上海市是中国国际经济、金融、贸易、航运、科技创新中心， 第三产业为其支柱产业，有着外贸物流、金融保险业、信息服务业、旅游业、房地产业和其他新兴服务业， 成为拉动经济增长“主动力”。 2023年，上海口岸贸易总额超10万亿元，为世界城市首位，并连续四年成功举办中国国际进口博览会，第四届展览面积达36.6万平方米、世界500强企业及行业龙头企业数量达281家。 2023年，上海市生产总值47218.66亿元，人均消费支出52508元。
+                </p>
+                <hr>
+                <h2>外滩</h2>
+                <div class="destination">
+                    <p>
+                        位于上海市中心黄浦区的黄浦江畔，是最具上海城市象征意义的景点之一，长约1.5公里，由南向北漫步，左手边是宽阔的中山东一路，路边一字排开着数十栋风格迥异的外国建筑，紧靠上海的母亲河—黄浦江，江上巨轮穿梭，江对岸则矗立着金茂大厦、环球金融中心等摩天建筑，夜晚，浦江两岸霓虹齐放，适合与爱人漫步在外滩，感受着“不夜城”的韵味与浪漫。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/shanghai/外滩1.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/外滩2.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/外滩3.jpg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>田子坊</h2>
+                <div class="destination">
+                    <p>
+                        由上海最具特色的石库门里弄演变而来，位于浦西，堪称很小资的地点之一，名字是画家黄永玉起的雅号，个性、文艺的年轻人初到上海定奔此地，感受田子坊与众不同的个性，走在田子坊，迂回穿行在迷宫般的弄堂里，特色小店和艺术作坊不经意间跳入视线。从茶馆、露天餐厅、露天咖啡座、画廊、家居摆设到手工艺品，以及众多沪上知名的创意工作室应有尽有。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/shanghai/田字 1.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/田子2.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/田字3.jpeg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>南京路步行街</h2>
+                <div class="destination">
+                    <p>
+                        全国十大著名步行街之一，是上海开埠后最早建立的一条商业街，这里是百货公司的聚集地，商品类目齐全，是购物者的天堂，随处可见富有创意的城市雕塑，街中央还有大量椅子供游客小坐，文艺时尚气息十足，南京路步行街上，可以看到像缩小版旧式电车的铛铛车穿梭往来，很有老上海的味道，不妨体验一下。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/shanghai/步行街1.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/步行街2.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/步行街3.jpeg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>上海城隍庙旅游区</h2>
+                <div class="destination">
+                    <p>
+                        城隍庙旅游区位于市中心黄浦区东部的老城区，是集景点观光、购物、餐饮于一体的大片区域。除了豫园和老城隍庙这两个主要的收费景点，还有九曲桥和湖心亭等开放性的小景点。这里的南翔小笼包不可错过，也可以坐在绿波廊餐厅内，边品尝上海本帮菜边欣赏楼下来来往往的人群。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/shanghai/城隍1.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/城隍2.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/城隍3.jpeg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+                <h2>1933老场坊</h2>
+                <div class="destination">
+                    <p>
+                        1933老场坊是由宰牲场改造的一座别具特色的创意园区，经常举办话剧表演、时装秀等，属于艺术聚集地。
+                        整个建筑融汇了东西方特色，外方内圆的建筑结构、纵横交错的廊桥，营造出迷宫一般的效果。独具匠心的设计、令人惊叹的空间，这里还承接过法拉利F1派对、雷达表50周年庆等大型商业活动。这里还是《小时代》的取景地，天气好的时候还能看到不少新人在这里拍摄婚纱照。
+                    </p>
+                    <p class="img">
+                        <img src="static/img/shanghai/1933 2.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/1933 3.jpeg" alt="" />
+                    </p>
+                    <p>
+                        <img src="static/img/shanghai/1933  1.jpeg" alt="" />
+                    </p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>© 2024 旅游项目网页。所有 rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+

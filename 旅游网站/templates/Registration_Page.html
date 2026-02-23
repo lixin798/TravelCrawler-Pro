@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/Registration_Page.css" />
+  <title>Registration Page</title>
+</head>
+
+<body>
+  <div class="registration-container">
+    <h2>Register</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required><br>
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" placeholder="Confirm your password" required><br>
+
+      <label for="captcha">Captcha:</label>
+      <input type="text" id="captcha" placeholder="Enter the captcha" required><br>
+
+      <p id="captchaText"></p><br>
+
+      <input type="submit" value="Register">
+    </form>
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+    <button id="generateCaptchaButton">Generate Captcha</button>
+  </div>
+
+  <!-- 修改引入的 JS 文件名为 Registration_Page_yzm.js -->
+  <script src="static/js/Registration_Page_yzm.js"></script>
+</body>
+
+</html>

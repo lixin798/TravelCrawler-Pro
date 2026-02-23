@@ -1,0 +1,220 @@
+/* 整体页面布局 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('../img/20200505161623_rxgst.jpg'); /* 替换为你的背景图片路径 */
+    background-size: cover; /* 使背景图片覆盖整个页面 */
+    background-attachment: fixed; /* 固定背景，不随页面滚动 */
+}
+
+/* 导航栏样式 */
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #333;
+  background-color: #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+a[href="http://127.0.0.1:8848/%E4%B8%BB%E9%A1%B5/index.html"] {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent; /* 初始下划线透明 */
+    transition: border-bottom-color 0.3s ease, color 0.3s ease; /* 过渡效果 */
+}
+a[href="http://127.0.0.1:8848/%E4%B8%BB%E9%A1%B5/index.html"]:hover {
+    border-bottom-color: white; /* 鼠标悬停时显示下划线 */
+    color: #ccc; /* 鼠标悬停时文字颜色变化 */
+    animation: bounce 0.5s ease; /* 添加动画效果 */
+}
+
+.home-link-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.home-link-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.home-link-container a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+/* 预订部分通用样式 */
+.booking-section {
+    height: 90vh!important;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    display: none;
+	max-height: 700px;
+	overflow-y: auto;
+}
+
+.section-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 酒店预约模块的css代码 */
+
+.reserve-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* 机票预约模块和旅游套餐预订模块的css代码 */
+.reserve-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-button:hover {
+    background-color: #0056b3;
+}
+select#departureCity, select#arrivalCity, select#destination {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reserve-button:hover {
+    background-color: #0056b3;
+}
+
+/* 商品信息样式 */
+.hotel-offer,
+.flight-offer,
+.package-offer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.offer-image {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.offer-details {
+  flex: 1;
+}
+
+.price {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* 表单样式 */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+ /* “我的预约”css*/
+ #hotelBookingsTable, #flightBookingsTable, #packageBookingsTable {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 20px;
+ }
+ 
+ #hotelBookingsTable th, #hotelBookingsTable td,
+ #flightBookingsTable th, #flightBookingsTable td,
+ #packageBookingsTable th, #packageBookingsTable td {
+     border: 1px solid #ddd;
+     padding: 8px;
+     text-align: left;
+ }
+ 
+ #hotelBookingsTable th, #flightBookingsTable th, #packageBookingsTable th {
+     background-color: #f2f2f2;
+ }
+ 
+ #hotelBookingsTable tr:nth-child(even), #flightBookingsTable tr:nth-child(even), #packageBookingsTable tr:nth-child(even) {
+     background-color: #f9f9f9;
+ }

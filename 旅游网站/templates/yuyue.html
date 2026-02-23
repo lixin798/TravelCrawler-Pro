@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/yuyue.css" type="text/css">
+  <link rel="stylesheet" href="static/css/styles.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.js"></script>
+  <title>旅游预订中心</title>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+      <a href="#hotelBooking" class="nav-link">Hotel Booking</a>
+      <a href="#flightBooking" class="nav-link">Flight Booking</a>
+      <a href="#packageBooking" class="nav-link">Package Booking</a> 
+        <a href="#myAccount" class="nav-link">myAccount</a>
+	</nav> 
+	 <div class="home-link-container">
+	       <a href="{{ url_for('index') }}"  style="color:white;">Return to the home page</a>
+	 </div>
+  
+  
+
+  <!-- 酒店预订部分 -->
+  <div id="hotelBooking" class="booking-section">
+      <h2 class="section-title">Hotel Booking</h2>
+	  <hr color="black"/>
+      <div class="hotel-offer">
+          <img src="static/img/20210702114312412d3oSveb.jpg" alt="酒店图片1" class="offer-image">
+          <div class="offer-details">
+              <h3 data-hotel-id="luxury beachfront hotel">luxury beachfront hotel</h3>
+              <p class="price">price: $200/晚</p>
+              <p>Our luxury beachfront hotel is the ultimate choice for a seaside vacation. It is located on the picturesque seashore and has an unrivaled sea view. Every guest room is like a private viewing platform. In the early morning, you can wake up to the gentle sound of the waves and the golden sunlight, and open the window to see the magnificent picture composed of the blue sea and the fine - grained sand. The hotel's private beach provides you with an exclusive leisure space. Whether you are lying lazily on a beach chair enjoying a sunbath, swimming and playing in the clear water, or participating in exciting water sports, this is the ideal destination for you to embrace the beauty of the seaside. </p>
+              <!-- <button type="button" class="reserve-button" data-hotel-id="luxury beachfront hotel">Book Now</button> -->
+          </div>
+      </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/SYDRS-P0268-Regency-Terrace-Suite-Bedroom.16x9.webp" alt="酒店图片2" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Business hotels">Business hotels</h3>
+	          <p class="price">price: $320/晚</p>
+	          <p>Features: They mainly provide services for business travelers. They are usually located in the city center or commercial areas with convenient transportation, making it easy for guests to access office buildings, convention centers and other business venues. Rooms are generally equipped with high - speed internet, office desks and chairs and other facilities to meet the office needs of business guests. For example, many urban hotels under the Hilton brand are business hotels. Their hotel lobbies may have business centers that provide printing, photocopying, faxing and other services.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Business hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/Hyatt-Regency-Kyoto-P1075-Kyoto-Suite-King-Room.16x9.webp" alt="酒店图片3" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Resort hotels">Resort hotels</h3>
+	          <p class="price">price: $340/晚</p>
+	          <p>Features: Most of them are located in tourist destinations such as seashores, mountainous areas, and hot spring areas. Their architectural styles and interior decorations often combine with the local natural environment or cultural characteristics. Resort hotels usually have abundant leisure and entertainment facilities, such as swimming pools, gyms, spas, private beaches, etc. For example, some water - based resort hotels in the Maldives allow guests to enter the water directly from their rooms and enjoy water activities such as snorkeling. The hotels also provide rental services for various water sports equipment.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Resort hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/u=751068924,675583616&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="酒店图片4" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Conference hotels">Conference hotels</h3>
+	          <p class="price">price: $234/晚</p>
+	          <p>Features: The focus is on hosting various conferences, exhibitions, large - scale events, etc. Such hotels generally have large - area meeting rooms and multifunctional halls, and are equipped with advanced audio - visual equipment, such as projectors, sound systems, etc. At the same time, the hotel's catering services can also meet the dining needs of large - scale teams. For example, the National Convention Center Grand Hotel in Beijing is adjacent to the National Convention Center and has various - sized meeting rooms that can host international and domestic conferences of different scales.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Conference hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/Hyatt-Regency-Kyoto-P1683-Deluxe-Corner-Twin-Bed.16x9.webp" alt="酒店图片5" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Airport hotels">Airport hotels</h3>
+	          <p class="price">price: $137/晚</p>
+	          <p>Features: They are mainly for the convenience of passengers catching flights or making transfers. They are located near the airport, and some even have direct access to the airport terminal. In addition to providing accommodation, airport hotels may also provide pick - up and drop - off services. Room prices may fluctuate according to flight times and other factors. For example, hotels near Shanghai Pudong International Airport are very convenient for passengers arriving late at night or departing early in the morning.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Airport hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/1.webp" alt="酒店图片6" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Luxury hotels">Luxury hotels</h3>
+	          <p class="price">price: $1000/晚</p>
+	          <p>Features: The architecture and decoration of the hotel are very exquisite, using high - grade materials and furniture. The service is extremely meticulous and personalized, with a relatively high ratio of staff to guests, able to provide all - round services. The catering service is also high - end, and there may be restaurants run by famous chefs, offering various high - grade dishes and rare wines. The Burj Al - Arab in Dubai is a typical example of a luxury hotel. The interior decoration of the hotel is magnificent. Rooms are equipped with the most advanced technological equipment and top - grade household items. Guests can enjoy high - end services such as personal butlers.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Luxury hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/u=2092902940,233878849&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="酒店图片7" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Motels">Motels</h3>
+	          <p class="price">price: $120/晚</p>
+	          <p>Features: They are generally located along highways and mainly provide convenient accommodation for self - driving travelers. Rooms usually can be accessed directly from the parking lot, and the facilities are relatively simple, mainly to meet the basic rest needs of guests. Prices are usually relatively affordable. There are many motels along the interstate highways in the United States. Their signs are usually very conspicuous, making it convenient for drivers to quickly find accommodation during long - distance driving.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Motels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/u=1929034644,2891473512&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="酒店图片8" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="High - end hotels">High - end hotels</h3>
+	          <p class="price">price: $299/晚</p>
+	          <p>Features: They are also excellent in terms of hardware facilities and service quality. The rooms of the hotel are exquisitely decorated, with a variety of high - end supporting facilities, such as high - grade bathroom equipment, comfortable beds, etc. Catering and leisure facilities are also relatively complete. Service personnel are professionally trained and can provide high - quality services. For example, many hotels under the InterContinental brand are high - end hotels. The restaurants in these hotels offer cuisines from all over the world, and the hotel's conference facilities can also meet the needs of mid - to - high - end business conferences.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="High - end hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/Hyatt-Place-Tampa-Airport-Westshore-P031-Double-Room.16x9.webp" alt="酒店图片9" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Mid - range hotels">Mid - range hotels</h3>
+	          <p class="price">price: $109/晚</p>
+	          <p>Features: They have relatively high cost - performance. The facilities of the hotel can meet the basic needs and some regular enjoyment needs of guests. The rooms are relatively comfortably furnished, with basic electrical equipment and clean bathroom facilities. The catering service has a certain quality guarantee, and may provide local special dishes and some common international cuisines. For example, the All - Seasons Hotel has simply and elegantly decorated rooms with comfortable bedding. The hotel lobby also provides free tea and other services.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Mid - range hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/LAXXL-P0030-Speciality-King-With-Sofabed-Bedroom.16x9.webp" alt="酒店图片9" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Economy hotels">Economy hotels</h3>
+	          <p class="price">price: $55/晚</p>
+	          <p>Features: They are mainly characterized by affordable prices. The facilities in the rooms are relatively simple, and there may not be too much decoration and high - end equipment, but they can ensure that guests have a clean and tidy accommodation environment. Such hotels usually streamline some non - essential services and facilities to reduce costs. For example, 7 - day Inn, Home Inn and other economy hotel brands. Their rooms mainly provide basic beds, TVs, air conditioners and other facilities. Breakfast may be in a simple buffet form.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Economy hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/2.webp" alt="酒店图片9" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Independently - operated hotels">Independently - operated hotels</h3>
+	          <p class="price">price: $203/晚</p>
+	          <p>Features: They are independently owned and operated by individuals or enterprises. The hotel's brand, management mode, etc. are all independently developed. Such hotels can operate flexibly according to their own positioning and local characteristics, forming a unique style. However, relatively speaking, they may be restricted in terms of market promotion, resource sharing, etc. For example, some characteristic inns located in ancient towns are operated by local residents themselves. They retain the traditional local architectural style and have strong local flavor in service.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Independently - operated hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/3.jpeg" alt="酒店图片9" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Chain hotels">Chain hotels</h3>
+	          <p class="price">price: $211/晚</p>
+	          <p>Features: It refers to multiple hotels using the same brand and adopting a unified operation and management mode. Chain hotels can share brand resources, procurement channels and other advantages and have high recognition in the market. The brand headquarters will regulate the service quality, facility standards, etc. of each branch. For example, Marriott International has multiple hotel brands, including Marriott Hotels, Renaissance Hotels, etc. The branches of these branded hotels around the world follow the unified standards of the group, and guests can experience similar service quality in different cities.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Chain hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  <div class="hotel-offer">
+	      <img src="static/img/4.jpg" alt="酒店图片9" class="offer-image">
+	      <div class="offer-details">
+	          <h3 data-hotel-id="Franchise hotels">Franchise hotels</h3>
+	          <p class="price">price: $550/晚</p>
+	          <p>Features: Hotel investors join a well - known brand. After paying a certain franchise fee, they use the brand and management mode of the brand owner to operate. The brand owner will provide technical support, personnel training and other services to help franchisees operate the hotel according to brand standards. This way allows investors to quickly enter the market with the influence of the brand, and at the same time, the brand owner can expand the brand coverage. For example, many small and medium - sized hotels in various places have improved their popularity and operation and management level by joining brands such as Hanting Hotel.</p>
+	          <!-- <button type="button" class="reserve-button" data-hotel-id="Franchise hotels">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+	  
+	  
+   <!-- Other hotel information -->
+        <form id="hotelBookingForm" data-type="酒店">
+            <label for="hotelName">Hotel Name</label>
+            <select id="hotelName" name="HotelName" required>
+                <option value="Luxury Seaside Hotel">Luxury Seaside Hotel</option>
+                <option value="Business hotels">Business hotels</option>
+                <option value="Resort hotels">Resort hotels</option>
+                <option value="Conference hotels">Conference hotels</option>
+                <option value="Airport hotels">Airport hotels</option>
+                <option value="Luxury hotels">Luxury hotels</option>
+                <option value="Motels">Motels</option>
+                <option value="High - end hotels">High - end hotels</option>
+                <option value="Mid - range hotels">Mid - range hotels</option>
+                <option value="Economy hotels">Economy hotels</option>
+   			 <option value="Independently - operated hotels">Independently - operated hotels</option>
+   			 <option value="Chain hotels">Chain hotels</option>
+   			 <option value="Franchise hotels">Franchise hotels</option>
+            </select>
+            <label for="checkInDate">Check - in Date</label>
+            <input type="date" id="checkInDate" name="CheckInDate" required>
+            <label for="checkOutDate">Check - out Date</label>
+            <input type="date" id="checkOutDate" name="checkOutDate" required>
+            <label for="roomType">Room Type</label>
+            <select id="roomType" name="roomType" required>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+            </select>
+            <input type="submit" value="Book a Hotel Room">
+        </form>
+    </div>
+
+
+
+
+  <!-- 机票预订部分 -->
+  <div id="flightBooking" class="booking-section">
+      <h2 class="section-title">Flight Booking</h2>
+	  <hr color="black"/>
+      <div class="flight-offer">
+          <img src="static/img/商务舱1.jfif" alt="机票图片1" class="offer-image">
+          <div class="offer-details">
+              <h3>Direct Flight</h3>
+              <p class="price">price: $300</p>
+              <p>Enjoy a comfortable direct flight and reach the destination quickly.</p>
+              <!-- <button type="button" class="reserve-button" data-flight-id="Direct Flight">Book Now</button> -->
+          </div>
+      </div>
+      <div class="flight-offer">
+          <img src="static/img/商务舱2.jfif" alt="机票图片2" class="offer-image">
+          <div class="offer-details">
+              <h3>Luxury Connecting Flight</h3>
+              <p class="price">price: $500</p>
+              <p>For the luxury connecting flight, enjoy the VIP lounge service at the connecting airport.</p>
+              <!-- <button type="button" class="reserve-button" data-flight-id="Luxury Connecting Flight">Book Now</button> -->
+          </div>
+      </div>
+	  <div class="flight-offer">
+	      <img src="static/img/商务舱3.jfif" alt="机票图片3" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Chartered Flight for Tourism</h3>
+	          <p class="price">price: $300</p>
+	          <p>Concept: A chartered flight for tourism is a flight that travel agencies or tour operators charter from airlines to meet the travel requirements of specific tourist routes or tourist groups. The timing and routes of these flights are usually arranged according to the tourist itinerary. For example, during the peak tourist season, a travel agency organizes a large tourist group to go on holiday to a popular island. It will charter a plane to fly directly from the place of origin to an airport near the destination island.
+Advantages: For tourists, chartered flights for tourism can provide a more convenient way to travel, especially to some tourist destinations with fewer regular flights. Moreover, members of the tourist group can take the same flight, which is convenient for travel agencies to organize and manage, reducing the waiting time of tourists during waiting at the airport and during the journey.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Chartered Flight for Tourism">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/头等舱1.jfif" alt="机票图片4" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Seasonal Tourism Flights</h3>
+	          <p class="price">price: $300</p>
+	          <p>Concept: Flights specially arranged according to the peak and off - peak seasons of tourist destinations. The number of tourists received at many tourist destinations varies significantly in different seasons. Airlines will adjust flight arrangements according to this situation. For example, in the winter in the northern hemisphere, some people will travel to Australia, New Zealand and other places in the southern hemisphere to escape the cold. Airlines will increase flights from major cities in the northern hemisphere to cities in Australia and New Zealand during this period.
+Advantages: Such flights can better match the demands of the tourism market. During the peak season, the frequency and number of seats of flights are increased to meet the travel needs of more tourists; during the off - season, flights are appropriately reduced to avoid waste of resources. This not only facilitates tourists' travel but also helps airlines to allocate resources reasonably and improve operational efficiency.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Seasonal Tourism Flights">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/头等舱2.jfif" alt="机票图片5" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Sightseeing Flights</h3>
+	          <p class="price">price: $300</p>
+	          <p>Concept: Sightseeing flights are mainly flights that aim to provide an aerial sightseeing experience. Aircraft usually fly along famous natural landscapes (such as the Grand Canyon, Mount Fuji, etc.), urban landmarks (such as the Manhattan skyline in New York, the Eiffel Tower in Paris, etc.) or coastlines. This type of flight generally has a relatively short flight time, and the flight altitude and route design will also consider enabling passengers to obtain the best sightseeing perspective.
+Advantages: For tourists, sightseeing flights are a unique way of tourism experience. They allow tourists to overlook beautiful scenery that is difficult to fully appreciate on the ground from the air, adding a new dimension to tourism. Sightseeing flights can also be used as an auxiliary tourism product, combined with ground - based tourism projects to enrich tourists' travel itineraries.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Sightseeing Flights">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/头等舱3.jfif" alt="机票图片6" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Luxury Tourism Flights ·</h3>
+	          <p class="price">price: $300</p>
+	          <p>Concept: Luxury tourism flights focus on providing tourists with high - end and comfortable travel experiences. These flights have relatively high standards in terms of in - flight facilities and services. The interior of the aircraft may be equipped with luxurious seats (such as lie - flat seats), high - end catering services (including cuisine prepared by famous chefs), exclusive entertainment systems, etc. At the same time, the crew's service is more attentive and meticulous, such as providing personalized travel consultation and assistance.
+Advantages: It is suitable for tourists who pursue high - quality tourism experiences and are not very price - sensitive. Luxury tourism flights allow tourists to start enjoying the holiday feeling during the flight, and due to the high - standard services and facilities, they can provide tourists with a more comfortable and pleasant in - flight environment.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Luxury Tourism Flights">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/头等舱4.jfif" alt="机票图片7" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Stop - over Flight</h3>
+	          <p class="price">price: $300</p>
+	          <p>A stop - over flight refers to a flight in which the aircraft needs to land at an intermediate airport during the flight and stay for a period of time before continuing to the destination. There are various reasons for the stop, such as refueling, boarding and disembarking some passengers, etc. For example, a flight from City A to City C makes a stop - over in City B. In City B, some passengers may get off the plane, and new passengers may board the plane, and then the flight takes off again and heads for City C. For airlines, this type of flight can optimize the route layout and improve the utilization rate of the aircraft; for passengers, sometimes they may have the opportunity to experience more airport facilities or take a short rest at the stop - over place, but it may also increase the travel time due to the stop - over.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Stop - over Flight">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机1.jpg" alt="机票图片8" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Code - sharing Flight</h3>
+	          <p class="price">price: $300</p>
+	          <p>Code - sharing is a form of cooperation between airlines. Simply put, one airline (the marketing airline) can use the flights of another airline (the operating airline) and sell them under its own flight number. For example, if Airline A and Airline B reach a code - sharing agreement, Airline A may regard a certain flight operated by Airline B as its own flight in its flight reservation system. Passengers purchase tickets from Airline A, but actually take the flight operated by Airline B. This way can enable airlines to expand their route networks, provide passengers with more travel options, and at the same time improve the operational efficiency and resource utilization efficiency of airlines.
+</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Code - sharing Flight">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机2.jpg" alt="机票图片9" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Low - cost Flight (Budget Flight)</h3>
+	          <p class="price">price: $300</p>
+	          <p>Low - cost flights mainly provide relatively low - fare flights by controlling operating costs. These airlines usually adopt a series of cost - control measures, such as using a single aircraft type (which can reduce aircraft maintenance and training costs), reducing in - flight services (for example, not providing free meals or only providing simple snacks and drinks), and choosing secondary airports with lower operating costs. For example, some low - cost airlines in Europe, such as Ryanair and easyJet, attract a large number of passengers with low prices. For those passengers who are more price - sensitive and willing to make certain compromises in services, it is an economical travel option.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Low - cost Flight (Budget Flight)">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机4.png" alt="机票图片10" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Regional Flight</h3>
+	          <p class="price">price: $300</p>
+	          <p>Regional flights are mainly used to connect large cities with small cities or remote areas. The aircraft usually used for these flights are relatively small in size with a relatively small number of seats, and the flight distance is generally short. Regional flights play a very important role in improving the aviation transportation network, promoting the balanced development of the regional economy, and strengthening the connection between remote areas and central cities. For example, in some mountainous areas or island areas with complex terrain and inconvenient transportation, regional flights may be an important way for local residents to travel and also help to drive local tourism and other industries.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Regional Flight">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机5.jpg" alt="机票图片11" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Commercial Flight</h3>
+	          <p class="price">price: $300</p>
+	          <p>This is the most common type of flight, operated by airlines for profit - making purposes. They fly according to the published flight schedules, operate on fixed routes and at fixed times, and connect airports around the world. For example, the vast majority of flights of large airlines such as Air China and United Airlines are commercial flights. These flights offer multiple cabin services, such as first - class, business - class, and economy - class, to meet the needs and budgets of different passengers.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Commercial Flight">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机3.webp" alt="机票图片12" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Private Charter Flight: </h3>
+	          <p class="price">price: $300</p>
+	          <p>Mainly provides exclusive flight services for individuals or small groups. Usually, wealthy individuals, corporate executives, or celebrities rent aircraft for business trips, vacations, etc. For example, some business people need to travel between different cities in a short time to attend emergency meetings. Charter flights can flexibly arrange itineraries according to their time and can provide high - level privacy and personalized services.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Private Charter Flight: ">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机6.webp" alt="机票图片13" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Group Charter Flight:</h3>
+	          <p class="price">price: $300</p>
+	          <p>This type of flight is generally chartered by travel agencies, sports teams, large - scale enterprise organizations, etc. for collective travel. For example, a large tourist group wants to go to a popular tourist destination with tight flight seats during the peak tourist season, or a professional sports team needs to travel to an away game. Charter flights can ensure that the whole team can travel together, facilitating the management of the itinerary.
+</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Group Charter Flight:">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机7.jpg" alt="机票图片14" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Domestic Flight</h3>
+	          <p class="price">price: $300</p>
+	          <p>Refers to flights between airports within a country. It mainly serves the domestic passenger and cargo transportation, and promotes economic, cultural, and personnel exchanges between different regions within the country. For example, in China, flights from Beijing to Shanghai, Guangzhou to Chengdu, etc. are domestic flights. These flights usually do not require complicated entry - exit procedures. The flight time is relatively short, and the route density is relatively large, which can provide a relatively convenient transportation mode for domestic passengers.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Domestic Flight">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机8.webp" alt="机票图片15" class="offer-image">
+	      <div class="offer-details">
+	          <h3>International Flight</h3>
+	          <p class="price">price: $300</p>
+	          <p>Refers to flights connecting airports between different countries. It involves cross - border passenger and cargo transportation and needs to comply with the entry - exit regulations and aviation agreements of various countries. International flights generally have a long flight distance, and the flight time may range from several hours to more than ten hours. For example, flights from Beijing, China to New York, the United States, London, the United Kingdom to Sydney, Australia, etc. are international flights. When taking international flights, passengers need to handle relevant procedures such as passports and visas, and go through customs and immigration inspections.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="International Flight">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机9.webp" alt="机票图片16" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Regional Flight</h3>
+	          <p class="price">price: $300</p>
+	          <p>Mainly used to connect specific regions within a country. These regions may have special political, economic, or geographical status. For example, flights between islands in some archipelagic countries are regional flights; or flights between Hong Kong, Macau, Taiwan and the Chinese mainland can also be regarded as regional flights to some extent (they are different from domestic flights in terms of aviation transportation management, etc.). These flights play an important role in strengthening the connection and communication within the region.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Regional Flight">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机10.webp" alt="机票图片17" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Regular Flight</h3>
+	          <p class="price">price: $300</p>
+	          <p>Flights that fly regularly according to a fixed schedule. This is the main way of airline flight operation. Passengers can query the flight schedule in advance and book tickets. The time arrangement of regular flights is relatively stable, which is beneficial for passengers to plan their itineraries reasonably. For example, a flight that takes off from Shanghai Pudong International Airport at 9:00 am every day and heads for Beijing Capital International Airport is a regular flight. Airlines will strictly arrange the operation and maintenance of the aircraft according to this schedule.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Regular Flight">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机11.jpg" alt="机票图片18" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Extra Flight:</h3>
+	          <p class="price">price: $300</p>
+	          <p>Flights temporarily added during the peak tourist season, holidays, or special events to meet the increased travel demand of passengers. For example, during the Chinese Spring Festival, many people choose to travel or go home to visit relatives. Airlines will increase extra flights on popular routes according to the forecast of passenger flow to relieve the transportation pressure. These flights are usually flexibly arranged on the basis of regular flights according to the actual demand.</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Extra Flight:">Book Now</button> -->
+	      </div>
+	  </div>
+	  <div class="flight-offer">
+	      <img src="static/img/飞机12.jpg" alt="机票图片19" class="offer-image">
+	      <div class="offer-details">
+	          <h3>Temporary Flight</h3>
+	          <p class="price">price: $300</p>
+	          <p>Mainly to respond to some emergency situations, such as natural disasters, emergency rescue missions, or special political, economic, and cultural activities. For example, when an earthquake occurs in a certain area, airlines may arrange temporary flights to transport rescue personnel and materials to the affected area. The time, route, and flight plan of this type of flight are relatively flexible and are determined according to specific circumstances.
+</p>
+	          <!-- <button type="button" class="reserve-button" data-flight-id="Temporary Flight">Book Now</button> -->
+	      </div>
+	  </div>
+	  
+          <form id="flightBookingForm" data-type="机票">
+              <label for="departureCity">departure airport</label>
+              <select id="departureCity" name="departureAirport" required>
+                  <option value="Doha Hamad International Airport">Doha Hamad International Airport</option>
+                  <option value="Singapore Changi International Airport">Singapore Changi International Airport</option>
+                  <option value="Seoul Incheon International Airport">Seoul Incheon International Airport</option>
+                  <option value="Tokyo Haneda International Airport">Tokyo Haneda International Airport</option>
+				  <option value="Tokyo Narita Airport">Tokyo Narita Airport</option>
+				  <option value="Paris Charles de Gaulle Airport">Paris Charles de Gaulle Airport</option>
+				  <option value="Dubai International Airport">Dubai International Airport</option>
+				  <option value="Munich Airport">Munich Airport</option>
+				  <option value="O'Hare International Airport in Chicago">O'Hare International Airport in Chicago</option>
+				  <option value="Zurich Airport">Zurich Airport</option>
+				  <option value="Atlanta Hartsfield-Jackson International Airport">Atlanta Hartsfield-Jackson International Airport</option>
+				  <option value="Chicago O'Hare International Airport">Chicago O'Hare International Airport</option>
+				  <option value="Sydney Airport">Sydney Airport</option>
+				  <option value="Amsterdam Schiphol Airport">Amsterdam Schiphol Airport</option>、
+				  <option value="Hartsfield-Jackson Atlanta International Airport">Hartsfield-Jackson Atlanta International Airport</option>
+				  <option value="Denver International Airport">Denver International Airport</option>
+				  <option value="Los Angeles International Airport">Los Angeles International Airport</option>
+				  <option value="Chicago O'Hare International Airport">Chicago O'Hare International Airport</option>
+				  <option value="San Francisco International Airport">San Francisco International Airport</option> 
+				  <option value="London Heathrow Airport">London Heathrow Airport</option>
+				  <option value="London Gatwick Airport">London Gatwick Airport</option>
+				  <option value="Charles de Gaulle Airport in Paris">Charles de Gaulle Airport in Paris</option>
+				  <option value="Orly Airport in Paris">Orly Airport in Paris</option>
+				  <option value="Frankfurt Airport">Frankfurt Airport</option>
+				  <option value="Munich Airport">Munich Airport</option>
+				  <option value="Narita International Airport in Tokyo">Narita International Airport in Tokyo</option>
+				  <option value="Haneda Airport in Tokyo">Haneda Airport in Tokyo</option>
+				  <option value="Incheon International Airport">Incheon International Airport</option>
+				  <option value="Changi Airport in Singapore">Changi Airport in Singapore</option>
+				  <option value="Dubai International Airport">Dubai International Airport</option>
+				  <option value="Sydney International Airport">Sydney International Airport</option>
+				  <option value="Melbourne International Airport">Melbourne International Airport</option>
+				  <option value="Amsterdam Schiphol Airport">Amsterdam Schiphol Airport</option>
+				  <option value="Beijing Capital International Airport">Beijing Capital International Airport</option>
+				  <option value="Beijing Daxing International Airport">Beijing Daxing International Airport</option>
+				  <option value="Shanghai Pudong International Airport">Shanghai Pudong International Airport</option>
+				  <option value="Shanghai Hongqiao International Airport">Shanghai Hongqiao International Airport</option>
+				  <option value="Guangzhou Baiyun International Airport">Guangzhou Baiyun International Airport</option>
+				  <option value="Shenzhen Bao'an International Airport">Shenzhen Bao'an International Airport</option>
+				  <option value="Chengdu Shuangliu International Airport">Chengdu Shuangliu International Airport</option>
+				  <option value="Chengdu Tianfu International Airport">Chengdu Tianfu International Airport</option>
+				  <option value="Chongqing Jiangbei International Airport">Chongqing Jiangbei International Airport</option>
+				  <option value="Kunming Changshui International Airport">Kunming Changshui International Airport</option>
+				  <option value="Xi'an Xianyang International Airport">Xi'an Xianyang International Airport</option>
+				  <option value="Hangzhou Xiaoshan International Airport">Hangzhou Xiaoshan International Airport</option>
+				  <option value="Nanjing Lukou International Airport">Nanjing Lukou International Airport</option>
+				  <option value="Wuhan Tianhe International Airport">Wuhan Tianhe International Airport</option>
+				  <option value="Changsha Huanghua International Airport">Changsha Huanghua International Airport</option>
+				  <option value="Zhengzhou Xinzheng International Airport">Zhengzhou Xinzheng International Airport</option>
+				  <option value="Nanjing Lukou International Airport">Nanjing Lukou International Airport</option>
+				  <option value="Xiamen Gaoqi International Airport">Xiamen Gaoqi International Airport</option>
+				  <option value="Qingdao Jiaodong International Airport">Qingdao Jiaodong International Airport</option>
+				  <option value="Urumqi Diwopu International Airport">Urumqi Diwopu International Airport</option>
+				  <option value="Haikou Meilan International Airport">Haikou Meilan International Airport</option>
+				  <option value="Sanya Phoenix International Airport">Sanya Phoenix International Airport</option>
+				  <option value="Shenyang Taoxian International Airport">Shenyang Taoxian International Airportv</option>
+				  <option value="Dalian Zhoushuizi International Airport">Dalian Zhoushuizi International Airport</option>
+				  <option value="Harbin Taiping International Airport">Harbin Taiping International Airport</option>
+              </select>
+              <label for="arrivalCity">arrival airport</label>
+              <select id="arrivalCity" name="arrivalAirport" required>
+                  <option value="Beijing Capital International Airport">Beijing Capital International Airport</option>
+                  <option value="Beijing Daxing International Airport">Beijing Daxing International Airport</option>
+                  <option value="Shanghai Pudong International Airport">Shanghai Pudong International Airport</option>
+                  <option value="Shanghai Hongqiao International Airport">Shanghai Hongqiao International Airport</option>
+				  <option value="Guangzhou Baiyun International Airport">Guangzhou Baiyun International Airport</option>
+				  <option value="Shenzhen Bao'an International Airport">Shenzhen Bao'an International Airport</option>
+				  <option value="Chengdu Shuangliu International Airport">Chengdu Shuangliu International Airport</option>
+				  <option value="Chengdu Tianfu International Airport">Chengdu Tianfu International Airport</option>
+				  <option value="Chongqing Jiangbei International Airport">Chongqing Jiangbei International Airport</option>
+				  <option value="Kunming Changshui International Airport">Kunming Changshui International Airport</option>
+				  <option value="Xi'an Xianyang International Airport">Xi'an Xianyang International Airport</option>
+				  <option value="Hangzhou Xiaoshan International Airport">Hangzhou Xiaoshan International Airport</option>
+				  <option value="Nanjing Lukou International Airport">Nanjing Lukou International Airport</option>
+				  <option value="Wuhan Tianhe International Airport">Wuhan Tianhe International Airport</option>
+				  <option value="Changsha Huanghua International Airport">Changsha Huanghua International Airport</option>
+				  <option value="Zhengzhou Xinzheng International Airport">Zhengzhou Xinzheng International Airport</option>
+				  <option value="Nanjing Lukou International Airport">Nanjing Lukou International Airport</option>
+				  <option value="Xiamen Gaoqi International Airport">Xiamen Gaoqi International Airport</option>
+				  <option value="Qingdao Jiaodong International Airport">Qingdao Jiaodong International Airport</option>
+				  <option value="Urumqi Diwopu International Airport">Urumqi Diwopu International Airport</option>
+				  <option value="Haikou Meilan International Airport">Haikou Meilan International Airport</option>
+				  <option value="Sanya Phoenix International Airport">Sanya Phoenix International Airport</option>
+				  <option value="Shenyang Taoxian International Airport">Shenyang Taoxian International Airportv</option>
+				  <option value="Dalian Zhoushuizi International Airport">Dalian Zhoushuizi International Airport</option>
+				  <option value="Doha Hamad International Airport">Doha Hamad International Airport</option>
+				  <option value="Singapore Changi International Airport">Singapore Changi International Airport</option>
+				  <option value="Seoul Incheon International Airport">Seoul Incheon International Airport</option>
+				  <option value="Tokyo Haneda International Airport">Tokyo Haneda International Airport</option>
+				  <option value="Tokyo Narita Airport">Tokyo Narita Airport</option>
+				  <option value="Paris Charles de Gaulle Airport">Paris Charles de Gaulle Airport</option>
+				  <option value="Dubai International Airport">Dubai International Airport</option>
+				  <option value="Munich Airport">Munich Airport</option>
+				  <option value="O'Hare International Airport in Chicago">O'Hare International Airport in Chicago</option>
+				  <option value="Zurich Airport">Zurich Airport</option>
+				  <option value="Atlanta Hartsfield-Jackson International Airport">Atlanta Hartsfield-Jackson International Airport</option>
+				  <option value="Chicago O'Hare International Airport">Chicago O'Hare International Airport</option>
+				  <option value="Sydney Airport">Sydney Airport</option>
+				  <option value="Amsterdam Schiphol Airport">Amsterdam Schiphol Airport</option>、
+				  <option value="Hartsfield-Jackson Atlanta International Airport">Hartsfield-Jackson Atlanta International Airport</option>
+				  <option value="Denver International Airport">Denver International Airport</option>
+				  <option value="Los Angeles International Airport">Los Angeles International Airport</option>
+				  <option value="Chicago O'Hare International Airport">Chicago O'Hare International Airport</option>
+				  <option value="San Francisco International Airport">San Francisco International Airport</option> 
+				  <option value="London Heathrow Airport">London Heathrow Airport</option>
+				  <option value="London Gatwick Airport">London Gatwick Airport</option>
+				  <option value="Charles de Gaulle Airport in Paris">Charles de Gaulle Airport in Paris</option>
+				  <option value="Orly Airport in Paris">Orly Airport in Paris</option>
+				  <option value="Frankfurt Airport">Frankfurt Airport</option>
+				  <option value="Munich Airport">Munich Airport</option>
+				  <option value="Narita International Airport in Tokyo">Narita International Airport in Tokyo</option>
+				  <option value="Haneda Airport in Tokyo">Haneda Airport in Tokyo</option>
+				  <option value="Incheon International Airport">Incheon International Airport</option>
+				  <option value="Changi Airport in Singapore">Changi Airport in Singapore</option>
+				  <option value="Dubai International Airport">Dubai International Airport</option>
+				  <option value="Sydney International Airport">Sydney International Airport</option>
+				  <option value="Melbourne International Airport">Melbourne International Airport</option>
+				  <option value="Amsterdam Schiphol Airport">Amsterdam Schiphol Airport</option>
+				  <option value="Harbin Taiping International Airport">Harbin Taiping International Airport</option>
+              </select>
+              <label for="departureDate">Departure Date</label>
+               <input type="date" id="departureDate" name="departureDate" required onchange="showTimeSelector(this)">
+				   <select id="departureTime" name="departureTime" style="display: none;">
+						<option value="00:00">00:00</option>
+						<option value="00:30">00:30</option>
+						<option value="01:00">01:00</option>
+						<option value="01:30">01:30</option>
+						<option value="02:00">02:00</option>
+						<option value="02:30">02:30</option>
+						<option value="03:00">03:00</option>
+						<option value="03:30">03:30</option>
+						<option value="04:00">04:00</option>
+						<option value="04:30">04:30</option>
+						<option value="05:00">05:00</option>
+						<option value="05:30">05:30</option>
+						<option value="06:00">06:00</option>
+						<option value="06:30">06:30</option>
+						<option value="07:00">07:00</option>
+						<option value="07:30">07:30</option>
+						<option value="08:00">08:00</option>
+						<option value="08:30">08:30</option>
+						<option value="09:00">09:00</option>
+						<option value="09:30">09:30</option>
+						<option value="10:00">10:00</option>
+						<option value="10:30">10:30</option>
+						<option value="11:00">11:00</option>
+						<option value="11:30">11:30</option>
+						<option value="12:00">12:00</option>
+						<option value="12:30">12:30</option>
+						<option value="13:00">13:00</option>
+						<option value="13:30">13:30</option>
+						<option value="14:00">14:00</option>
+						<option value="14:30">14:30</option>
+						<option value="15:00">15:00</option>
+						<option value="15:30">15:30</option>
+						<option value="16:00">16:00</option>
+						<option value="16:30">16:30</option>
+						<option value="17:00">17:00</option>
+						<option value="17:30">17:30</option>
+						<option value="18:00">18:00</option>
+						<option value="18:30">18:30</option>
+						<option value="19:00">19:00</option>
+						<option value="19:30">19:30</option>
+						<option value="20:00">20:00</option>
+						<option value="20:30">20:30</option>
+						<option value="21:00">21:00</option>
+						<option value="21:30">21:30</option>
+						<option value="22:00">22:00</option>
+						<option value="22:30">22:30</option>
+						<option value="23:00">23:00</option>
+						<option value="23:30">23:30</option>
+					</select>
+              <label for="Flight type">Flight type</label>
+              <select id="Flight type" name="Flight type" required>
+                  <option value="Direct Flight">Direct Flight</option>
+                  <option value="Luxury Connecting Flight">Luxury Connecting Flight</option>
+                  <option value="Chartered Flight for Tourism">Chartered Flight for Tourism</option>
+				  <option value="Seasonal Tourism Flights">Seasonal Tourism Flights</option>
+				  <option value="Sightseeing Flights">Sightseeing Flights</option>
+				  <option value="Luxury Tourism Flights ">Luxury Tourism Flights </option>
+				  <option value="Stop - over Flight">Stop - over Flight</option>
+				  <option value="Code - sharing Flight">Code - sharing FlightLow - cost Flight (Budget Flight)Regional FlightCommercial Flight</option>
+				  <option value="Low - cost Flight (Budget Flight)Regional FlightCommercial Flight">Low - cost Flight (Budget Flight)Regional FlightCommercial Flight</option>
+				  <option value="Regional FlightCommercial Flight">Regional FlightCommercial Flight</option>
+				  <option value="Commercial Flight">Commercial Flight</option>
+				  <option value="Private Charter Flight">Private Charter FlightGroup Charter Flight</option>
+				  <option value="Group Charter Flight">Group Charter Flight</option>
+				  <option value="Domestic Flight">Domestic Flight</option>
+				  <option value="International Flight">International Flight</option>
+				   <option value="Regional Flight">Regional Flight</option>
+				    <option value="Regular Flight">Regular Flight</option>
+					 <option value="Extra Flight">Extra Flight</option>
+					  <option value="Temporary Flight">Temporary Flight</option>
+
+              </select>
+              <input type="submit" value="Book a Ticket">
+          </form>
+  </div>
+  
+  <!-- 旅游套餐预订部分 -->
+  <div id="packageBooking" class="booking-section">
+    <h2 class="section-title">Package Booking</h2>
+    <hr color="black"/>
+    <div class="package-offer">
+        <img src="static/img/海滨之旅.webp" alt="Tour Package Image 1" class="offer-image">
+        <div class="offer-details">
+            <h3>Beach Vacation Package</h3>
+            <p class="price">Price: $1500 - $3000</p>
+            <p>Beach vacations are usually in popular beach areas, with high costs for hotels and air tickets. Coupled with a wide range of beach activities, the price should be increased.</p>
+            <button type="button" class="more-info-button">Show More</button>
+            <div class="more-info" style="display: none;">
+                <p>China is home to many beautiful coastal cities that are perfect for beach vacations. Here are some of the famous coastal tourist cities in China:</p>
+                <ol>
+                    <li><strong>Sanya</strong>: Located in Hainan Province, it is one of China's most famous tropical coastal tourist cities, known for its clear seawater, soft sandy beaches, and rich marine resources.</li>
+                    <li><strong>Qingdao</strong>: Located in Shandong Province, it is known for its German-style architecture, beer festival, and beautiful coastal scenery.</li>
+                    <li><strong>Xiamen</strong>: Located in Fujian Province, it is a coastal city full of artistic atmosphere, with famous attractions such as Gulangyu Island.</li>
+                    <li><strong>Dalian</strong>: Located in Liaoning Province, it is loved by tourists for its cool summer climate and abundant coastal tourism resources.</li>
+                    <li><strong>Beihai</strong>: Located in the Guangxi Zhuang Autonomous Region, it is famous for its Silver Beach and Weizhou Island attractions.</li>
+                    <li><strong>Haikou</strong>: Located in Hainan Province, it is the provincial capital of Hainan and an important coastal tourist city.</li>
+                    <li><strong>Zhuhai</strong>: Located in Guangdong Province, it borders Macau and is known for its coastal scenery and livable environment.</li>
+                    <li><strong>Rizhao</strong>: Located in Shandong Province, it is an emerging coastal tourist city, welcomed by tourists for its high-quality beaches and fresh air.</li>
+                    <li><strong>Ningbo</strong>: Located in Zhejiang Province, it is a historic port city with a beautiful coastline and rich cultural heritage.</li>
+                    <li><strong>Shenzhen</strong>: Located in Guangdong Province, it is a modern metropolis in China, with beautiful coastal parks and modern coastal facilities.</li>
+                </ol>
+                <p>These cities each have their own characteristics, offering a rich beach vacation experience, including beach bathing areas, water sports, seafood delicacies, and coastal resort areas.</p>
+            </div>
+        </div>
+    </div>
+    <div class="package-offer">
+        <img src="static/img/登山之旅.webp" alt="Tour Package Image 2" class="offer-image">
+        <div class="offer-details">
+            <h3>Mountain Adventure Package</h3>
+            <p class="price">Price: $1800 - $3500</p>
+            <p>The mountain-climbing package for adventure enthusiasts involves professional mountain-climbing guidance, equipment rental (if any), and special arrangements such as camping, resulting in higher costs.</p>
+            <button type="button" class="more-info-button">Show More</button>
+            <div class="more-info" style="display: none;">
+                <p>China has many cities and regions suitable for mountain adventures. Here are some famous destinations for mountain exploration:</p>
+                <ol>
+                    <li><strong>Lijiang</strong>: Located in Yunnan Province, near Jade Dragon Snow Mountain, it is a popular spot for hiking, mountaineering, and exploring the Himalayas.</li>
+                    <li><strong>Shangri-La</strong>: Also in Yunnan Province, it is famous for its magnificent natural scenery and Tibetan culture, making it ideal for high-altitude hiking and adventure.</li>
+                    <li><strong>Four Girls Mountain</strong>: Located in the Aba Tibetan and Qiang Autonomous Prefecture of Sichuan Province, it is a well-known destination for climbing and hiking in China.</li>
+                    <li><strong>Huangshan</strong>: Situated in Anhui Province, it is renowned for its peculiar pine trees, sea of clouds, hot springs, and peculiarly shaped peaks and rocks, making it suitable for mountain climbing and sightseeing.</li>
+                    <li><strong>Zhangjiajie</strong>: Located in Hunan Province, it is famous for its unique pillar-like peak forest landscape, making it an ideal place for hiking and exploration.</li>
+                    <li><strong>Emei Mountain</strong>: Located in Sichuan Province, it is one of China's four sacred Buddhist mountains and a popular destination for mountain climbing and religious cultural tourism.</li>
+                    <li><strong>Mount Tai</strong>: Located in Shandong Province, it is the foremost of the Five Great Mountains of China, known for its magnificent mountain views and historical and cultural relics.</li>
+                    <li><strong>Mount Hua</strong>: Located in Shaanxi Province, it is known for its steep and precipitous terrain and the challenge it presents to mountaineers.</li>
+                    <li><strong>Gongga Mountain</strong>: Located in Sichuan Province, it is the highest peak in Sichuan and a target for mountaineering enthusiasts.</li>
+                    <li><strong>Meili Snow Mountain</strong>: Located in Yunnan Province, it is one of the sacred mountains in Tibetan Buddhism, attracting many explorers with its mysterious snow-capped mountain scenery.</li>
+                </ol>
+                <p>These areas offer a wealth of mountain adventure activities and possess unique natural landscapes and cultural backgrounds, suitable for climbers and explorers of all levels.</p>
+            </div>
+        </div>
+    </div>
+    <div class="package-offer">
+        <img src="static/img/红色之旅.jpeg" alt="Tour Package Image 1" class="offer-image">
+        <div class="offer-details">
+            <h3>Red Journey Package</h3>
+            <p class="price">Price: $1200 - $2500</p>
+            <p>This type of tourism may involve tickets to attractions with historical and cultural value, guided tour services, etc. At the same time, transportation and accommodation arrangements also need to be considered, so the price is adjusted accordingly.</p>
+            <button type="button" class="more-info-button">Show More</button>
+            <div class="more-info" style="display: none;">
+                <p>"Red Journey" typically refers to a type of tourism that focuses on visiting historical sites and experiencing the cultural heritage related to significant events, often with a political or revolutionary context. In the context of China, a "Red Journey" usually involves visiting places that are associated with the history of the Chinese Communist Party and the revolutionary struggles that led to the founding of the People's Republic of China.</p>
+                <ol>
+                    <li><strong>Shanghai</strong>: The birthplace of the Chinese Communist Party, with sites like the First National Congress of the Chinese Communist Party.</li>
+                    <li><strong>Jiaxing</strong>: Known for the "Red Boat" on South Lake, where the first congress of the Chinese Communist Party was secretly held.</li>
+                    <li><strong>Yan'an</strong>: A revolutionary sacred land in Shaanxi Province, where the Chinese Communist Party established its base during the Second Sino-Japanese War and the Chinese Civil War.</li>
+                    <li><strong>Ruili</strong>: A city in Yunnan Province, known for its role in the Chinese Civil War and as a gateway to Myanmar.</li>
+                    <li><strong>Zhuzhou</strong>: Located in Hunan Province, it was an important base for the Red Army during the Long March.</li>
+                    <li><strong>Jinggangshan</strong>: Known as the first rural revolutionary base of the Chinese Communist Party, located in Jiangxi Province.</li>
+                    <li><strong>Beijing</strong>: The capital city, where many significant political events took place, including the establishment of the People's Republic of China.</li>
+                    <li><strong>Xinjiang</strong>: Some sites in Xinjiang are also part of the Red Journey, reflecting the region's role in the revolutionary history.</li>
+                    <li><strong>Northeast China</strong>: The region played a crucial role in the resistance against Japanese occupation and is part of the Red Journey.</li>
+                </ol>
+                <p>These destinations offer a deep dive into China's revolutionary history, providing visitors with a greater understanding of the country's past and the sacrifices made by its people.</p>
+            </div>
+        </div>
+    </div>
+    <div class="package-offer">
+        <img src="static/img/茶文化之旅.jpg" alt="Tour Package Image 1" class="offer-image">
+        <div class="offer-details">
+            <h3>Tea Culture Tour Package</h3>
+            <p class="price">Price: $1300 - $2800</p>
+            <p>It includes activities such as visiting tea gardens, learning tea art, and tasting special tea products. It may also involve in-depth tea culture experience courses, so the price can be appropriately increased.</p>
+            <button type="button" class="more-info-button">Show More</button>
+            <div class="more-info" style="display: none;">
+                <p>China is the birthplace of tea, with a long history of tea culture and rich tea cultural tourism resources. Here are some famous cities for tea culture tours in China:</p>
+                <ol>
+                    <li><strong>Hangzhou</strong>: Located in Zhejiang Province, it is famous for West Lake Longjing tea, where visitors can tour tea gardens and experience the process of tea picking and making.</li>
+                    <li><strong>Suzhou</strong>: Located in Jiangsu Province, it is known for Biluochun tea, and Suzhou's tea culture is closely linked with its garden culture.</li>
+                    <li><strong>Huangshan</strong>: Located in Anhui Province, Huangshan Maofeng is one of the top ten famous teas in China, and visitors can experience tea picking in the tea gardens at the foot of Huangshan.</li>
+                    <li><strong>Wuyishan</strong>: Located in Fujian Province, it is the birthplace of Wuyi Rock tea and a dual World Heritage site for culture and nature.</li>
+                    <li><strong>Anxi</strong>: Located in Fujian Province, it is the hometown of Chinese Tieguanyin tea, with a rich tea culture and tea art performances.</li>
+                    <li><strong>Pu'er</strong>: Located in Yunnan Province, it is the birthplace of Pu'er tea, with a long history of tea making and a unique Tea Horse Road culture.</li>
+                    <li><strong>Xishuangbanna</strong>: Located in Yunnan Province, it is one of the main producing areas of Chinese Pu'er tea and an important birthplace of ethnic tea culture.</li>
+                    <li><strong>Lushan</strong>: Located in Jiangxi Province, it is famous for Lushan Yunwu tea, one of China's historic famous teas.</li>
+                    <li><strong>Enshi</strong>: Located in Hubei Province, Enshi Yulu tea is a famous Chinese green tea, and the area has a rich Tujia and Miao ethnic tea culture.</li>
+                    <li><strong>Chengdu</strong>: Located in Sichuan Province, it is the center of Sichuan tea culture, with a well-developed teahouse culture and an ideal place to taste Sichuan teas.</li>
+                </ol>
+                <p>These cities not only offer the opportunity to taste various famous Chinese teas but also provide a deep understanding of Chinese tea culture and the chance to experience the art of tea.</p>
+            </div>
+        </div>
+    </div>
+    <div class="package-offer">
+        <img src="static/img/民俗体验之旅.jpeg" alt="Tour Package Image 1" class="offer-image">
+        <div class="offer-details">
+            <h3>Folk Experience Tour Package</h3>
+            <p class="price">Price: $1200 - $2500</p>
+            <p>Folk experience requires arranging local-featured folk activities, traditional handicraft-making courses, etc., as well as transportation and accommodation costs for in-depth visits to local folk villages.</p>
+            <button type="button" class="more-info-button">Show More</button>
+            <div class="more-info" style="display: none;">
+                <p>China's Folk Experience Tour Package covers multiple regions, each with its unique culture and traditions. Here are some Chinese cities that offer a rich folk experience:</p>
+                <ol>
+                    <li><strong>Lijiang</strong>: Located in Yunnan Province, it is the center of Naxi culture, where visitors can experience traditional Naxi music, dance, and handicrafts.</li>
+                    <li><strong>Xishuangbanna</strong>: Located in Yunnan Province, it is the birthplace of Dai culture, where visitors can participate in traditional festivals like the Water-Splashing Festival and experience daily Dai life.</li>
+                    <li><strong>Qiandongnan</strong>: Located in Guizhou Province, it is the habitat of the Miao and Dong ethnic groups, known for ethnic celebrations like the Miao and Dong New Year and the distinctive stilt house architecture.</li>
+                    <li><strong>Guilin</strong>: Located in the Guangxi Zhuang Autonomous Region, it is primarily known for Zhuang culture, where visitors can experience Zhuang songs, dances, celebrations, and traditional handicrafts.</li>
+                    <li><strong>Lhasa</strong>: Located in the Tibet Autonomous Region, it is the center of Tibetan culture, where visitors can experience Tibetan religious ceremonies, traditional music, and dance.</li>
+                    <li><strong>Urumqi</strong>: Located in the Xinjiang Uyghur Autonomous Region, it is the center of Uyghur culture, where visitors can experience traditional Uyghur music, dance, and handicrafts.</li>
+                    <li><strong>Hohhot</strong>: Located in the Inner Mongolia Autonomous Region, it is the center of Mongolian culture, where visitors can experience the Nadam Fair and traditional nomadic life.</li>
+                    <li><strong>Yanbian</strong>: Located in Jilin Province, it is the habitat of the Korean ethnic group, where visitors can experience traditional Korean dance, music, and cuisine.</li>
+                    <li><strong>Dali</strong>: Located in Yunnan Province, it is the center of Bai culture, where visitors can experience traditional Bai festivals like the March Street and customs like the Three-Course Tea.</li>
+                    <li><strong>Kashgar</strong>: Located in the Xinjiang Uyghur Autonomous Region, it is the ancient city of Kashgar, where visitors can experience traditional Uyghur handicrafts and architectural arts.</li>
+                </ol>
+                <p>These cities and regions offer opportunities to delve into China's diverse cultures and folk customs, making them ideal choices for folk experience tourism.</p>
+            </div>
+        </div>
+    </div>
+	
+    <div class="package-offer">
+        <img src="static/img/美食之旅.png" alt="Tour Package Image 1" class="offer-image">
+        <div class="offer-details">
+            <h3>Gourmet Tour Package</h3>
+            <p class="price">Price: $1500 - $3000</p>
+            <p>The gourmet tour will include tasting various special cuisines. Some may involve precious ingredients or exclusive dishes. Meanwhile, transportation costs for finding food and possible food-making course fees need to be considered.</p>
+            <button type="button" class="more-info-button">Show More</button>
+            <div class="more-info" style="display: none;">
+                <p>China's "Gourmet Tour" covers many cities, each with its unique cuisine and food culture. Here are some of the famous cities for food tourism in China:</p>
+                <ol>
+                    <li><strong>Chengdu</strong>: The capital of Sichuan Province, famous for its spicy Sichuan cuisine and hot pot, known as the "Land of Abundance."</li>
+                    <li><strong>Guangzhou</strong>: A city in Guangdong Province, the birthplace of Cantonese cuisine, known for dim sum, roasted delicacies, and soups.</li>
+                    <li><strong>Xi'an</strong>: A city in Shaanxi Province, known for northwestern flavors such as Yangroupaomo, Liangpi, and Roujiamo.</li>
+                    <li><strong>Shanghai</strong>: Famous for Shanghainese specialties like soup dumplings, pan-fried buns, and Benbang cuisine.</li>
+                    <li><strong>Beijing</strong>: The capital of China, known for traditional foods like Peking duck, Zhajiangmian, and Douzhi.</li>
+                    <li><strong>Hangzhou</strong>: A city in Zhejiang Province, known for Hangzhou dishes such as West Lake vinegar fish, Dongpo pork, and Longjing shrimp.</li>
+                    <li><strong>Chongqing</strong>: Famous for spicy foods like Chongqing hot pot and Chuanchuanxiang.</li>
+                    <li><strong>Changsha</strong>: A city in Hunan Province, known for Hunan dishes like stinky tofu, chopped chili fish head, and rice noodles.</li>
+                    <li><strong>Nanjing</strong>: A city in Jiangsu Province, known for Jinling cuisine such as salted duck, duck blood soup with vermicelli, and soup dumplings.</li>
+                    <li><strong>Xiamen</strong>: A city in Fujian Province, known for Minnan flavors like seafood, satay noodles, and earthworm jelly.</li>
+                    <li><strong>Kunming</strong>: A city in Yunnan Province, known for Yunnan specialties like Guoqiaomixian, fresh flower cakes, and various Yunnan snacks.</li>
+                    <li><strong>Qingdao</strong>: A city in Shandong Province, known for seafood, Tsingtao beer, and Lu cuisine.</li>
+                </ol>
+                <p>The cuisines of these cities not only reflect the rich culinary culture of China but also attract tourists from both domestic and international locations. On a gourmet tour in China, visitors can taste a variety of local specialties and experience the art of Chinese cuisine.</p>
+            </div>
+        </div>
+    </div>
+   
+    <div class="package-offer">
+        <img src="static/img/生态之旅.jpg" alt="Tour Package Image 1" class="offer-image">
+        <div class="offer-details">
+            <h3>Eco Tour Package</h3>
+            <p class="price">Price: $1300 - $2800</p>
+            <p>The eco-tour may involve tickets to nature reserves, professional eco-guide explanations, the use of environmentally-friendly transportation tools, etc. The price is adjusted to reflect its unique value.</p>
+            <button type="button" class="more-info-button">Show More</button>
+            <div class="more-info" style="display: none;">
+                <p>China's "Eco Tour" covers many cities, each with its unique natural landscapes and ecosystems. Here are some of the famous destinations for eco-tourism in China:</p>
+                <ol>
+                    <li><strong>Jiuzhaigou</strong>: Located in Sichuan Province, it is famous for its unique plateau lakes, waterfalls, and colorful forest ecosystems.</li>
+                    <li><strong>Zhangjiajie</strong>: Located in Hunan Province, it has become a popular destination for eco-tourism with its spectacular pillar-like peaks and national forest parks.</li>
+                    <li><strong>Xishuangbanna</strong>: Located in Yunnan Province, it is known for its tropical rainforests and rich biodiversity.</li>
+                    <li><strong>Huangshan</strong>: Located in Anhui Province, it is renowned for its peculiar pine trees, sea of clouds, hot springs, and peculiarly shaped peaks and rocks.</li>
+                    <li><strong>Changbai Mountain</strong>: Located in Jilin Province, it is known for its primeval forests, Tianchi volcanic lake, and abundant wild flora and fauna.</li>
+                    <li><strong>Wuyishan</strong>: Located in Fujian Province, it is a dual World Heritage site for both nature and culture, famous for its beautiful landscapes and tea culture.</li>
+                    <li><strong>Qinghai Lake</strong>: Located in Qinghai Province, it is China's largest inland and saltwater lake, attracting visitors with its spectacular lake and mountain views and bird habitats.</li>
+                    <li><strong>Sanjiangyuan</strong>: Located in Qinghai Province, it is the source of the Yangtze River, Yellow River, and Lancang River, and is important for its unique plateau wetland ecosystem.</li>
+                    <li><strong>Shennongjia</strong>: Located in Hubei Province, it has become a hotspot for eco-tourism with its primeval forests and rare species of flora and fauna.</li>
+                    <li><strong>Daxing'anling</strong>: Located in Heilongjiang Province, it is an important forest area in Northeast China, known for its vast forests and wild flora and fauna.</li>
+                </ol>
+                <p>These cities and regions offer a wealth of eco-tourism experiences, including hiking, wildlife observation, and natural scenery photography, allowing visitors to enjoy the natural beauty while understanding the importance of protecting the natural environment.</p>
+            </div>
+        </div>
+    </div>
+	
+    <div class="package-offer">
+        <img src="static/img/文化旅游.webp" alt="Tour Package Image 1" class="offer-image">
+        <div class="offer-details">
+            <h3>Cultural Tour Package</h3>
+            <p class="price">Price: $1200 - $2500</p>
+            <p> It includes visiting various cultural relics, museums and other attractions. There may be professional guides, and transportation and accommodation costs in different cultural regions also need to be considered.</p>
+            <!-- <button type="button" class="reserve-button" data-package-id="Cultural Tour Package">Book Now</button> -->
+			<button type="button" class="more-info-button">Show More</button>
+			<div class="more-info" style="display: none;">
+			    <p>China's cultural tourism resources are rich, covering historical relics, famous cultural cities, and ethnic customs. Here are some of the famous cities for cultural tourism in China:</p>
+			    <ol>
+			       <li>Beijing: As the capital of China, it boasts many world cultural heritages such as the Forbidden City, Tiananmen Square, and the Great Wall.</li>
+				   <li><strong>Xi'an:</strong> Known as Chang'an in ancient times, it is the starting point of the Silk Road and is home to the Terracotta Army, the Big Wild Goose Pagoda, and other famous historical sites.</li>
+			       <li><strong>Luoyang: </strong>One of the ancient capitals, famous for the Longmen Grottoes, the White Horse Temple, and other cultural heritages.</li>
+			       <li><strong>Nanjing:</strong> Known as the capital of the Six Dynasties, it has historical relics such as the Ming Xiaoling Mausoleum, the Sun Yat - sen Mausoleum, and the Nanjing City Wall.</li>
+			       <li><strong>Hangzhou:</strong> Renowned for the West Lake cultural landscape and historical sites such as Lingyin Temple.</li>
+			       <li><strong>Suzhou:</strong> Known for its classical gardens (such as the Humble Administrator's Garden, the Master of Nets Garden) and the Beijing - Hangzhou Grand Canal section in Suzhou.</li>
+			       <li><strong>Chengdu:</strong> The cultural center of Sichuan, it has historical relics such as the Wuhou Shrine and the Thatched Cottage of Du Fu.</li>
+			       <li><strong>Lijiang: </strong>Located in Yunnan Province, it is known for the Dongba culture of the Naxi people and Lijiang Ancient Town.</li>
+			       <li><strong>Kashgar: </strong>Located in the Xinjiang Uyghur Autonomous Region, it is an important city for Uyghur culture, with historical sites such as the Id Kah Mosque.</li>
+			       <li><strong>Pingyao: </strong>Located in Shanxi Province, it is known for its well - preserved city wall and Pingyao Ancient City.</li>
+			       <li><strong>Huangshan:</strong> In addition to natural scenery, Huizhou culture and ancient villages (such as Hongcun, Xidi) are also important parts of cultural tourism.</li>
+			       <li><strong>Quanzhou:</strong> The starting point of the Maritime Silk Road, it has religious cultural sites such as the Kaiyuan Temple and the Qingjing Mosque.</li>
+			    </ol>
+			    <p>These cities are just a part of the many traditional art tourism cities in China, each with its unique culture and art, and are worth visiting.</p>
+        </div>
+    </div>
+</div>
+   <div class="package-offer">
+       <img src="static/img/传统艺术之旅.webp" alt="Tour Package Image 1" class="offer-image">
+       <div class="offer-details">
+           <h3>Traditional Art Tour Package</h3>
+           <p class="price">Price: $1300 - $2800</p>
+           <p>Activities such as visiting art studios, watching traditional art performances, and participating in art-creation courses will be arranged. The costs include artist guidance fees and special venue usage fees.</p>
+           <button type="button" class="more-info-button">Show More</button>
+      
+       <div class="more-info" style="display: none;">
+           <p>China is rich in traditional art tourism cities, and here are some cities recognized as national historical and cultural cities, each with its unique traditional arts and cultural heritage:</p>
+           <ol>
+               <li><strong>Beijing:</strong> As the capital of China, Beijing has numerous cultural heritages and traditional arts, such as Peking Opera and Cloisonné.</li>
+               <li><strong>Tai'an:</strong> Located in Shandong Province, it is famous for Mount Tai and has a wealth of traditional arts and culture.</li>
+               <li><strong>Wuxi:</strong> A city in Jiangsu Province, known for its traditional purple sand teapots and Suzhou embroidery.</li>
+               <li><strong>Jinhua:</strong> A city in Zhejiang Province, known for Jinhua ham and Wu opera, among other traditional arts.</li>
+               <li><strong>Haikou:</strong> The capital of Hainan Province, with unique Hainanese culture and arts.</li>
+               <li><strong>Changchun:</strong> A city in Jilin Province, famous for its winter ice lantern art and Northeastern Errenzhuan, a traditional art form.</li>
+               <li><strong>Changzhou:</strong> A city in Jiangsu Province, known for its traditional combs and Luzhou embroidery.</li>
+               <li><strong>Wenzhou:</strong> A city in Zhejiang Province, known for its Ou opera and Ou sculpture, among other traditional arts.</li>
+               <li><strong>Chengdu:</strong> A city in Sichuan Province, famous for its Sichuan opera face-changing and Shu embroidery.</li>
+               <li><strong>Suzhou:</strong> A city in Jiangsu Province, known for its garden art and Suzhou embroidery.</li>
+           </ol>
+           <p>These cities are just a part of the many traditional art tourism cities in China, each with its unique culture and art, and are worth visiting.</p>
+       </div>
+   </div> 
+</div>
+    <div class="package-offer">
+        <img src="static/img/传统音乐之旅.jpg" alt="Tour Package Image 1" class="offer-image">
+        <div class="offer-details">
+            <h3>Traditional Music Tour Package</h3>
+            <p class="price">Price: $1300 - $2800</p>
+            <p>It may include activities such as enjoying traditional music performances, learning to play traditional musical instruments, and communicating with musicians. Ticket and teaching costs are relatively high.</p>
+            <button type="button" class="more-info-button">Show More</button>
+       
+        <div class="more-info" style="display: none;">
+            <p>China's traditional music tourism cities are very rich, and here are some cities known for their traditional music culture:</p>
+            <ol>
+                <li><strong>Lijiang City:</strong> Located in Yunnan Province, Lijiang is known as the "City of Music" and is famous for its unique Naxi ancient music and Dongba music, making it a popular destination for traditional music tourism.</li>
+                <li><strong>Beijing:</strong> As the capital of China, Beijing has a rich traditional music culture, including Peking Opera music and Beijing Qin Shu, making it an important city for traditional music tourism.</li>
+                <li><strong>Chengdu:</strong> The capital of Sichuan Province, it is known for its Sichuan Opera music and Sichuan Qingyin, among other traditional music forms.</li>
+                <li><strong>Suzhou:</strong> A city in Jiangsu Province, it is famous for its Kunqu music and Suzhou Pingtan, among other traditional music forms.</li>
+                <li><strong>Xi'an:</strong> The capital of Shaanxi Province, it is known for its Guqin music and Qinqiang, among other traditional music forms.</li>
+                <li><strong>Hangzhou:</strong> The capital of Zhejiang Province, it is known for its Yue Opera music and Hangzhou storytelling, among other traditional music forms.</li>
+                <li><strong>Guangzhou:</strong> The capital of Guangdong Province, it is famous for its Cantonese Opera music and Guangdong music, among other traditional music forms.</li>
+                <li><strong>Yangzhou:</strong> A city in Jiangsu Province, it is known for its Yangzhou Qingqu, among other traditional music forms.</li>
+            </ol>
+            <p>These cities not only have rich traditional music resources but are also excellent tourist destinations for experiencing Chinese traditional culture and music.</p>
+        </div>
+    </div>
+</div>
+    <div class="package-offer">
+        <img src="static/img/传统武术之旅.png" alt="Tour Package Image 1" class="offer-image">
+        <div class="offer-details">
+            <h3>Traditional Martial Arts Tour Package</h3>
+            <p class="price">Price: $1300 - $2800</p>
+            <p>It includes martial arts master guidance courses, visiting martial arts gyms, experiencing martial arts training, etc., involving professional personnel fees and special training venue rental fees.</p>
+            <button type="button" class="more-info-button">Show More</button>
+       
+        <div class="more-info" style="display: none;">
+            <p>China's traditional martial arts tourism cities are very rich, and here are some cities known for their traditional martial arts culture:</p>
+            <ol>
+                <li><strong>Songshan (Dengfeng City, Henan Province):</strong> Shaolin Temple is located here, and it is famous worldwide for the Shaolin Kung Fu created and continuously developed by generations of Shaolin monks, with the saying "All martial arts in the world come from Shaolin, and Shaolin Kung Fu is the best in the world."</li>
+                <li><strong>Wudang Mountain (Danjiangkou City, Hubei Province):</strong> Wudang martial arts are a part of Chinese martial arts, and there is a saying "In the north, Shaolin is revered; in the south, Wudang is respected."</li>
+                <li><strong>Emei Mountain:</strong> Emei martial arts are an important school of Chinese martial arts, making Emei Mountain an important destination for martial arts tourism.</li>
+                <li><strong>Kongtong Mountain:</strong> Kongtong School is one of the traditional Chinese martial arts schools, and Kongtong martial arts originated earlier than Shaolin, Emei, and Wudang in Kongtong Mountain, which is a part of Taoist culture.</li>
+                <li><strong>Qingcheng Mountain (Dujiangyan City, Sichuan Province):</strong> Qingcheng School originated from Qingcheng Mountain and is a famous school of Chinese martial arts with a history of nearly 2000 years.</li>
+                <li><strong>Zhongnan Mountain:</strong> Zhongnan Mountain is the birthplace of the Taoist Quanzhen School and is also one of the important birthplaces of martial arts culture.</li>
+                <li><strong>Cangzhou (Hebei Province):</strong> Cangzhou is known for its profound martial arts culture and numerous martial arts schools, and is known as the "Hometown of Martial Arts."</li>
+                <li><strong>Wen County (Henan Province):</strong> Wen County, along with Dengfeng City, has been awarded the title of "The Most Chinese Martial Arts Hometown," and is famous for its profound Tai Chi culture.</li>
+            </ol>
+            <p>These cities not only have rich traditional martial arts resources but are also excellent tourist destinations for experiencing Chinese traditional culture and martial arts.</p>
+        </div>
+    </div>
+	 </div>
+
+        <form id="packageBookingForm"  data-type="旅游套餐">
+            <label for="destination">Destination</label>
+            <select id="destination"  name="destination" required>
+                <option value="Beach City Sanya">Beach City Sanya</option>
+                <option value="Beach City Qingdao">Beach City Qingdao</option>
+                <option value="Beach City Xiamen">Beach City Xiamen</option>
+                <option value="Beach City Dalian">Beach City Dalian</option>
+				<option value="Beach City Beihai">Beach City Beihai</option>
+				<option value="Beach City Haikou">Beach City Haikou</option>
+				<option value="Beach City Zhuhai">Beach City Zhuhai</option>
+				<option value="Beach City Rizhao">Beach City Rizhao</option>
+				<option value="Beach City Ningbo">Beach City Ningbo</option>
+				<option value="Beach City Shenzhen">Beach City Shenzhen</option>
+				<option value="Mountain Adventure Lijiang ">Mountain Adventure Lijiang </option>
+				<option value="Mountain Adventure Shangri-La ">Mountain Adventure Shangri-La </option>
+				<option value="Mountain Adventure Four Girls Mountain ">Mountain Adventure Four Girls Mountain </option>
+				<option value="Mountain Adventure Huangshan ">Mountain Adventure Huangshan </option>
+				<option value="Mountain Adventure Zhangjiajie ">Mountain Adventure Zhangjiajie </option>
+				<option value="Mountain Adventure Emei Mountain">Mountain Adventure Emei Mountain </option>
+				<option value="Mountain Adventure Mount Tai ">Mountain Adventure Mount Tai  Province</option>
+				<option value="Mountain Adventure Mount Hua ">Mountain Adventure Mount Hua </option>
+				<option value="Mountain Adventure Gongga Mountain ">Mountain Adventure Gongga Mountain</option>
+				<option value="Mountain Adventure Meili Snow Mountain ">Mountain Adventure Meili Snow Mountain </option>
+				<option value="Red Journey Shanghai">Red Journey Shanghai</option>
+				<option value="Red Journey Jiaxing">Red Journey Jiaxing</option>
+				<option value="Red Journey Yan'an">Red Journey Yan'an</option>
+				<option value="Red Journey Ruili">Red Journey Ruili</option>
+				<option value="Red Journey Zhuzhou">Red Journey Zhuzhou</option>
+				<option value="Red Journey Jinggangshan">Red Journey Jinggangshan</option>
+				<option value="Red Journey Beijing">Red Journey Beijing</option>
+				<option value="Red Journey Xinjiang">Red Journey Xinjiang</option>
+				<option value="Red Journey Northeast China">Red Journey Northeast China</option>
+				<option value="Tea Culture Tour Hangzhou">Tea Culture Tour Hangzhou</option>
+				<option value="Tea Culture Tour Suzhou">Tea Culture Tour Suzhou</option>
+				<option value="Tea Culture Tour Huangshan">Tea Culture Tour Huangshan</option>
+				<option value="Tea Culture Tour Wuyishan">Tea Culture Tour Wuyishan</option>
+				<option value="Tea Culture Tour Anxi">Tea Culture Tour Anxi</option>
+				<option value="Tea Culture Tour Pu'er">Tea Culture Tour Pu'er</option>
+				<option value="Tea Culture Tour Xishuangbanna">Tea Culture Tour Xishuangbanna</option>
+				<option value="Tea Culture Tour Lushan">Tea Culture Tour Lushan</option>
+				<option value="Tea Culture Tour Enshi">Tea Culture Tour Enshi</option>
+				<option value="Tea Culture Tour Chengdu">Tea Culture Tour Chengdu</option>
+				<option value="Folk Experience Tour Lijiang">Folk Experience Tour Lijiang</option>
+				<option value="Folk Experience Tour Xishuangbanna">Folk Experience Tour Xishuangbanna</option>
+				<option value="Folk Experience Tour Qiandongnan">Folk Experience Tour Qiandongnan</option>
+				<option value="Folk Experience Tour Guilin">Folk Experience Tour Guilin</option>
+				<option value="Folk Experience Tour Lhasa">Folk Experience Tour Lhasa</option>
+				<option value="Folk Experience Tour Urumqi">Folk Experience Tour Urumqi</option>
+				<option value="Folk Experience Tour Hohhot">Folk Experience Tour Hohhot</option>
+				<option value="Folk Experience Tour Yanbian">Folk Experience Tour Yanbian</option>
+				<option value="Folk Experience Tour Dali">Folk Experience Tour Dali</option>
+				<option value="Folk Experience Tour Kashgar">Folk Experience Tour Kashgar</option>
+				<option value="Gourmet Tour Chengdu">Gourmet Tour Chengdu</option>
+				<option value="Gourmet Tour Beijing">Gourmet Tour Beijing</option>
+				<option value="Gourmet Tour Shanghai">Gourmet Tour Shanghai</option>
+				<option value="Gourmet TourXi'an">Gourmet Tour Xi'an</option>
+				<option value="Gourmet Tour Guangzhou">Gourmet Tour Guangzhou</option>
+				<option value="Gourmet Tour Hangzhou">Gourmet Tour Hangzhou</option>
+				<option value="Gourmet Tour Chongqing">Gourmet Tour Chongqing</option>
+				<option value="Gourmet Tour Changsha">Gourmet Tour Changsha</option>
+				<option value="Gourmet Tour Nanjing">Gourmet Tour Nanjing</option>
+				<option value="Gourmet Tour Xiamen">Gourmet Tour Xiamen</option>
+				<option value="Gourmet Tour Kunming">Gourmet Tour Kunming</option>
+				<option value="Gourmet Tour Qingdao">Gourmet Tour Qingdao</option>
+				<option value="Eco Tour Jiuzhaigou">Eco Tour Jiuzhaigou</option>
+				<option value="Eco Tour Zhangjiajie">Eco Tour Zhangjiajie</option>
+				<option value="Eco Tour Xishuangbanna">Eco Tour Xishuangbanna</option>
+				<option value="Eco Tour Huangshan">Eco Tour Huangshan</option>
+				<option value="Eco Tour Changbai Mountain">Eco Tour Changbai Mountain</option>
+				<option value="Eco Tour Wuyishan">Eco Tour Wuyishan</option>
+				<option value="Eco Tour Qinghai Lake">Eco Tour Qinghai Lake</option>
+				<option value="Eco Tour Sanjiangyuan">Eco Tour Sanjiangyuan</option>
+				<option value="Eco Tour Shennongjia">Eco Tour Shennongjia</option>
+				<option value="Eco Tour Daxing'anling">Eco Tour Daxing'anling</option>
+				<option value="Cultural Tour Beijing">Cultural Tour Beijing</option>
+				<option value="Cultural Tour Xi'an">Cultural Tour Xi'an</option>
+				<option value="Cultural Tour Luoyang">Cultural Tour Luoyang</option>
+				<option value="Cultural Tour Nanjing">Cultural Tour Nanjing</option>
+				<option value="Cultural Tour Hangzhou">Cultural Tour Hangzhou</option>
+				<option value="Cultural Tour Suzhou">Cultural Tour Suzhou</option>
+				<option value="Cultural Tour Chengdu">Cultural Tour Chengdu</option>
+				<option value="Cultural Tour Lijiang">Cultural Tour Lijiang</option>
+				<option value="Cultural Tour Kashgar">Cultural Tour Kashgar</option>
+				<option value="Cultural Tour Pingyao">Cultural Tour Pingyao</option>
+				<option value="Cultural Tour Huangshan">Cultural Tour Huangshan</option>
+				<option value="Cultural Tour Quanzhou">Cultural Tour Quanzhou</option>
+				<option value="Traditional Art Tour Beijing">Traditional Art Tour Beijing</option>
+				<option value="Traditional Art Tour Tai'an">Traditional Art Tour Tai'an</option>
+				<option value="Traditional Art Tour Wuxi">Traditional Art Tour Wuxi</option>
+				<option value="Traditional Art Tour Jinhua">Traditional Art Tour Jinhua</option>
+				<option value="Traditional Art Tour Haikou">Traditional Art Tour Haikou</option>
+				<option value="Traditional Art Tour Changchun">Traditional Art Tour Changchun</option>
+				<option value="Traditional Art Tour Changzhou">Traditional Art Tour Changzhou</option>
+				<option value="Traditional Art Tour Wenzhou">Traditional Art Tour Wenzhou</option>
+				<option value="Traditional Art Tour Chengdu">Traditional Art Tour Chengdu</option>
+				<option value="Traditional Art Tour Suzhou">Traditional Art Tour Suzhou</option>
+				<option value="Traditional Music Tour Lijiang">Traditional Music Tour Lijiang</option>
+				<option value="Traditional Music Tour Beijing">Traditional Music Tour Beijing</option>
+				<option value="Traditional Music Tour Chengdu">Traditional Music Tour Chengdu</option>
+				<option value="Traditional Music Tour Suzhou">Traditional Music Tour Suzhou</option>
+				<option value="Traditional Music Tour Xi'an">Traditional Music Tour Xi'an</option>
+				<option value="Traditional Music Tour Hangzhou">Traditional Music Tour Hangzhou</option>
+				<option value="Traditional Music Tour Guangzhou">Traditional Music Tour Guangzhou</option>
+				<option value="Traditional Music Tour Yangzhou">Traditional Music Tour Yangzhou</option>
+				<option value="Traditional Martial Arts Tour Songshan (Dengfeng City, Henan Province)">Traditional Martial Arts Tour Songshan (Dengfeng City, Henan Province)</option>
+				<option value="Traditional Martial Arts Tour Wudang Mountain (Danjiangkou City, Hubei Province)">Traditional Martial Arts Tour Wudang Mountain (Danjiangkou City, Hubei Province)</option>
+				<option value="Traditional Martial Arts Tour Emei Mountain">Traditional Martial Arts Tour Emei Mountain</option>
+				<option value="Traditional Martial Arts Tour Kongtong Mountain">Traditional Martial Arts Tour Kongtong Mountain</option>
+				<option value="Traditional Martial Arts Tour Qingcheng Mountain (Dujiangyan City, Sichuan Province)">Traditional Martial Arts Tour Qingcheng Mountain (Dujiangyan City, Sichuan Province)</option>
+				<option value="Traditional Martial Arts Tour Zhongnan Mountain">Traditional Martial Arts Tour Zhongnan Mountain</option>
+				<option value="Traditional Martial Arts Tour Cangzhou (Hebei Province)">Traditional Martial Arts Tour Cangzhou (Hebei Province)</option>
+				<option value="Traditional Martial Arts Tour Wen County (Henan Province)">Traditional Martial Arts Tour Wen County (Henan Province)</option>
+
+				
+            </select>
+            <label for="travelDate">Travel Date</label>
+            <input type="date" id="travelDate" name="travelDate" required>
+            <label for="numPeople">Number of People</label>
+            <input type="number" id="numPeople"  name="numPeople" min="1" placeholder="Enter number of people" required>
+            <label for="packageType">Package Type</label>
+            <select id="packageType" name="packageType" required>
+                <option value="basic">Basic Package (Accommodation)</option>
+                <option value="premium">Premium Package (Food, Accommodation)</option>
+                <option value="luxury">Luxury Package (Entertainment, Food, Accommodation)</option>
+            </select>
+            <input type="submit" value="Book Package">
+        </form>
+</div>
+  
+   
+   <!-- My Appointments -->
+  <div id="myAccount" class="booking-section">
+      <h2 class="section-title"> my appointment</h2>
+      <hr color="black"/>
+      <!-- Hotel Reservation Form -->
+<h3>Hotel reservations</h3>
+<table id="hotelBookingsTable">
+    <thead>
+        <tr>
+            <th>The name of the hotel</th>
+            <th>Check-in date</th>
+            <th>Check-out date</th>
+            <th>Room type</th>
+            <th>Appointment category</th>
+            <th>numbering</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in hotel_bookings %}
+        <tr data-booking-id="{{ booking.id }}">
+            <td>{{ booking.hotel_name }}</td>
+            <td>{{ booking.check_in_date }}</td>
+            <td>{{ booking.check_out_date }}</td>
+            <td>{{ booking.room_type }}</td>
+            <td>{{ booking.appointment_category }}</td>
+            <td>{{ booking.numbering }}</td>
+            <td>
+                <button>删除订单</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<!-- Aircraft Reservation Form -->
+<h3>Aircraft reservations</h3>
+<table id="flightBookingsTable">
+    <thead>
+        <tr>
+            <th>Place of departure</th>
+            <th>Destinations</th>
+            <th>Departure date</th>
+            <th>Flight type</th>
+            <th>Appointment category</th>
+            <th>numbering</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in flight_bookings %}
+        <tr data-booking-id="{{ booking.id }}">
+            <td>{{ booking.place_of_departure }}</td>
+            <td>{{ booking.destinations }}</td>
+            <td>{{ booking.departure_date }}</td>
+            <td>{{ booking.flight_type }}</td>
+            <td>{{ booking.appointment_category }}</td>
+            <td>{{ booking.numbering }}</td>
+            <td>
+                <button>删除订单</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<!-- Tour Package Reservation Form -->
+<h3>Tour package reservations</h3>
+<table id="packageBookingsTable">
+    <thead>
+        <tr>
+            <th>Destinations</th>
+            <th>Travel dates</th>
+            <th>Number of people</th>
+            <th>Package type</th>
+            <th>Appointment category</th>
+            <th>numbering</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in package_bookings %}
+        <tr data-booking-id="{{ booking.id }}">
+            <td>{{ booking.destinations }}</td>
+            <td>{{ booking.travel_dates }}</td>
+            <td>{{ booking.number_of_people }}</td>
+            <td>{{ booking.package_type }}</td>
+            <td>{{ booking.appointment_category }}</td>
+            <td>{{ booking.numbering }}</td>
+            <td>
+                <button>删除订单</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+  </div>
+  <script src="static/js/yuyue.js"></script>
+</body>
+</html>
